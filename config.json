@@ -1,0 +1,39 @@
+{
+  "as_of_date": "2026-09-30",
+  "internal": {
+    "columns": {
+      "record_id": "txn_id",
+      "txn_date": "booking_date",
+      "amount": "amount",
+      "currency": "currency",
+      "reference": "reference",
+      "counterparty": "counterparty",
+      "description": "narrative"
+    },
+    "date_format": "%Y-%m-%d",
+    "default_currency": "CAD"
+  },
+  "processor": {
+    "columns": {
+      "record_id": "SettlementID",
+      "txn_date": "SettleDate",
+      "amount": "NetAmount",
+      "currency": "Ccy",
+      "reference": "Ref",
+      "counterparty": "MerchantName"
+    },
+    "date_format": "%d/%m/%Y",
+    "default_currency": "CAD"
+  },
+  "matching": {
+    "date_window_days": 3,
+    "amount_tolerance_cents": 250,
+    "amount_tolerance_pct": 0.0,
+    "fuzzy_threshold": 0.80,
+    "fuzzy_amount_tolerance_cents": 0,
+    "name_match_threshold": 0.80,
+    "max_group_size": 4,
+    "max_group_candidates": 20,
+    "settlement_lag_days": 2
+  }
+}

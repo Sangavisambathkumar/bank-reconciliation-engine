@@ -1,0 +1,53 @@
+Reconciliation as of 2026-09-30
+  Internal records :   1000   total $    100,770.32
+  Processor records:    936   total $     96,170.87
+  Rejected rows    :      4
+  Match rate       : internal 93.0%, processor 97.2%
+
+  Groups by status:
+    MATCHED_EXACT            721
+    MATCHED_TOLERANCE         73
+    MATCHED_FUZZY             44
+    MATCHED_MANY_TO_ONE       28
+    MATCHED_ONE_TO_MANY       22
+    BREAK                     11
+    UNMATCHED_INTERNAL        59
+    UNMATCHED_PROCESSOR       12
+    DUPLICATE                  3
+
+  Proof:
+    Internal ledger total                               100,770.32
+    Processor settlement total                           96,170.87
+    Gap to explain (internal - processor)                 4,599.45
+    Exact matches (should be 0)                               0.00
+    Fees / small differences on tolerance matches            83.40
+    Differences on fuzzy matches                              0.00
+    Differences on batched settlements                        0.00
+    Differences on split settlements                          0.00
+    Breaks: amount disagreements to investigate             521.65
+    Booked internally, not yet settled                    5,406.54
+    Settled by processor, not booked internally            -874.60
+    Duplicate lines                                        -537.54
+    Unexplained (must be 0)                                   0.00
+
+  Reconciled in 0.08s
+  Report : /home/claude/recon-engine/output/recon_report.xlsx
+  Detail : /home/claude/recon-engine/output/recon_results.csv
+
+Accuracy against ground truth
+  Link precision : 100.00%   (pairings we made that are correct)
+  Link recall    : 100.00%   (true pairings we found)
+  Status accuracy: 100.00%
+
+  Scenario            Items  Correct     Rate
+  batch                  28       28   100.0%
+  break                  11       11   100.0%
+  clean                 718      718   100.0%
+  duplicate               3        3   100.0%
+  extra-chargeback        6        6   100.0%
+  extra-deposit           6        6   100.0%
+  fee                    73       73   100.0%
+  missing                24       24   100.0%
+  noref                  44       44   100.0%
+  split                  22       22   100.0%
+  timing                 35       35   100.0%

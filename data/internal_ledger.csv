@@ -1,0 +1,1002 @@
+txn_id,booking_date,amount,currency,reference,counterparty,narrative
+INT-00001,2026-09-21,24.24,CAD,TXN-100001,Bay Street Books,Card payment - Bay Street Books
+INT-00002,2026-09-14,67.25,CAD,TXN-100002,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00003,2026-09-26,107.28,CAD,TXN-100003,Joe's Cafe,Card payment - Joe's Cafe
+INT-00004,2026-09-11,258.24,CAD,TXN-100004,Bay Street Books,Card payment - Bay Street Books
+INT-00005,2026-09-27,250.43,CAD,TXN-100005,Midtown Optometry,Card payment - Midtown Optometry
+INT-00006,2026-09-03,166.14,CAD,TXN-100006,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00007,2026-09-07,119.67,CAD,TXN-100007,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00008,2026-09-09,96.76,CAD,TXN-100008,Midtown Optometry,Card payment - Midtown Optometry
+INT-00009,2026-09-09,56.63,CAD,TXN-100009,Midtown Optometry,Card payment - Midtown Optometry
+INT-00010,2026-09-11,99.19,CAD,TXN-100010,Union Fitness Club,Card payment - Union Fitness Club
+INT-00011,2026-09-18,129.96,CAD,TXN-100011,Kensington Grocers,Card payment - Kensington Grocers
+INT-00012,2026-09-25,128.78,CAD,TXN-100012,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00013,2026-09-20,315.53,CAD,TXN-100013,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00014,2026-09-25,47.02,CAD,TXN-100014,Midtown Optometry,Card payment - Midtown Optometry
+INT-00015,2026-09-17,150.72,CAD,TXN-100015,Bay Street Books,Card payment - Bay Street Books
+INT-00016,2026-09-30,333.98,CAD,TXN-100016,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00017,2026-09-01,139.69,CAD,TXN-100017,Bay Street Books,Card payment - Bay Street Books
+INT-00018,2026-09-27,12.20,CAD,TXN-100018,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00019,2026-09-25,185.16,CAD,TXN-100019,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00020,2026-09-15,43.99,CAD,TXN-100020,Bay Street Books,Card payment - Bay Street Books
+INT-00021,2026-09-03,86.70,CAD,TXN-100021,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00022,2026-09-03,34.30,CAD,TXN-100022,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00023,2026-09-30,77.90,CAD,TXN-100023,Scarborough Tire,Card payment - Scarborough Tire
+INT-00024,2026-09-26,39.27,CAD,TXN-100024,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00025,2026-09-02,130.27,CAD,TXN-100025,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00026,2026-09-07,58.13,CAD,TXN-100026,Junction Records,Card payment - Junction Records
+INT-00027,2026-09-28,11.19,CAD,TXN-100027,Junction Records,Card payment - Junction Records
+INT-00028,2026-09-16,6.66,CAD,TXN-100028,Union Fitness Club,Card payment - Union Fitness Club
+INT-00029,2026-09-07,87.09,CAD,TXN-100029,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00030,2026-09-17,16.60,CAD,TXN-100030,Queen West Florist,Card payment - Queen West Florist
+INT-00031,2026-09-29,25.37,CAD,TXN-100031,Scarborough Tire,Card payment - Scarborough Tire
+INT-00032,2026-09-23,34.20,CAD,TXN-100032,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00033,2026-09-19,28.86,CAD,TXN-100033,Bay Street Books,Card payment - Bay Street Books
+INT-00034,2026-09-12,149.79,CAD,TXN-100034,Yorkville Dental,Card payment - Yorkville Dental
+INT-00035,2026-09-05,74.65,CAD,TXN-100035,Kensington Grocers,Card payment - Kensington Grocers
+INT-00036,2026-09-09,22.37,CAD,TXN-100036,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00037,2026-09-09,153.05,CAD,TXN-100037,Queen West Florist,Card payment - Queen West Florist
+INT-00038,2026-09-23,102.06,CAD,TXN-100038,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00039,2026-09-30,145.43,CAD,TXN-100039,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00040,2026-09-22,39.91,CAD,TXN-100040,Bay Street Books,Card payment - Bay Street Books
+INT-00041,2026-09-26,115.23,CAD,TXN-100041,Queen West Florist,Card payment - Queen West Florist
+INT-00042,2026-09-04,6.44,CAD,TXN-100042,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00043,2026-09-07,9.44,CAD,TXN-100043,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00044,2026-09-01,146.63,CAD,TXN-100044,Bay Street Books,Card payment - Bay Street Books
+INT-00045,2026-09-11,93.28,CAD,TXN-100045,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00046,2026-09-30,105.19,CAD,TXN-100046,Junction Records,Card payment - Junction Records
+INT-00047,2026-09-03,373.88,CAD,TXN-100047,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00048,2026-09-11,132.07,CAD,TXN-100048,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00049,2026-09-10,37.44,CAD,TXN-100049,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00050,2026-09-26,71.16,CAD,TXN-100050,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00051,2026-09-07,51.65,CAD,TXN-100051,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00052,2026-09-08,359.61,CAD,TXN-100052,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00053,2026-09-18,23.16,CAD,TXN-100053,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00054,2026-09-29,19.79,CAD,TXN-100054,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00055,2026-09-29,136.47,CAD,TXN-100055,Queen West Florist,Card payment - Queen West Florist
+INT-00056,2026-09-09,26.75,CAD,TXN-100056,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00057,2026-09-13,33.71,CAD,TXN-100057,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00058,2026-09-27,31.77,CAD,TXN-100058,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00059,2026-09-27,20.55,CAD,TXN-100059,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00060,2026-09-27,222.51,CAD,TXN-100060,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00061,2026-09-29,65.04,CAD,TXN-100061,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00062,2026-09-01,30.30,CAD,TXN-100062,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00063,2026-09-30,101.59,CAD,TXN-100063,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00064,2026-09-21,23.45,CAD,TXN-100064,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00065,2026-09-11,150.22,CAD,TXN-100065,Greektown Taverna,Card payment - Greektown Taverna
+INT-00066,2026-09-18,192.41,CAD,TXN-100066,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00067,2026-09-08,63.68,CAD,TXN-100067,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00068,2026-09-20,304.05,CAD,TXN-100068,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00069,2026-09-10,38.09,CAD,TXN-100069,Scarborough Tire,Card payment - Scarborough Tire
+INT-00070,2026-09-10,79.54,CAD,TXN-100070,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00071,2026-09-21,18.22,CAD,TXN-100071,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00072,2026-09-14,10.47,CAD,TXN-100072,Queen West Florist,Card payment - Queen West Florist
+INT-00073,2026-09-27,35.81,CAD,TXN-100073,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00074,2026-09-28,35.74,CAD,TXN-100074,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00075,2026-09-07,34.02,CAD,TXN-100075,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00076,2026-09-03,16.53,CAD,TXN-100076,Yorkville Dental,Card payment - Yorkville Dental
+INT-00077,2026-09-12,43.86,CAD,TXN-100077,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00078,2026-09-24,10.78,CAD,TXN-100078,Junction Records,Card payment - Junction Records
+INT-00079,2026-09-12,23.43,CAD,TXN-100079,Queen West Florist,Card payment - Queen West Florist
+INT-00080,2026-09-05,203.85,CAD,TXN-100080,Midtown Optometry,Card payment - Midtown Optometry
+INT-00081,2026-09-06,64.70,CAD,TXN-100081,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00082,2026-09-04,188.12,CAD,TXN-100082,Junction Records,Card payment - Junction Records
+INT-00083,2026-09-19,30.17,CAD,TXN-100083,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00084,2026-09-03,27.20,CAD,TXN-100084,Queen West Florist,Card payment - Queen West Florist
+INT-00085,2026-09-02,42.26,CAD,TXN-100085,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00086,2026-09-21,51.73,CAD,TXN-100086,Scarborough Tire,Card payment - Scarborough Tire
+INT-00087,2026-09-03,31.65,CAD,TXN-100087,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00088,2026-09-09,74.42,CAD,TXN-100088,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00089,2026-09-22,76.50,CAD,TXN-100089,Scarborough Tire,Card payment - Scarborough Tire
+INT-00090,2026-09-15,20.37,CAD,TXN-100090,Kensington Grocers,Card payment - Kensington Grocers
+INT-00091,2026-09-11,32.21,CAD,TXN-100091,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00092,2026-09-18,60.23,CAD,TXN-100092,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00093,2026-09-01,192.47,CAD,TXN-100093,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00094,2026-09-21,110.38,CAD,TXN-100094,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00095,2026-09-29,65.08,CAD,TXN-100095,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00096,2026-09-03,62.33,CAD,TXN-100096,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00097,2026-09-14,75.82,CAD,TXN-100097,High Park Cycles,Card payment - High Park Cycles
+INT-00098,2026-09-10,95.85,CAD,TXN-100098,Scarborough Tire,Card payment - Scarborough Tire
+INT-00099,2026-09-25,5.00,CAD,TXN-100099,Junction Records,Card payment - Junction Records
+INT-00100,2026-09-28,54.48,CAD,TXN-100100,Greektown Taverna,Card payment - Greektown Taverna
+INT-00101,2026-09-02,67.26,CAD,TXN-100101,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00102,2026-09-05,14.44,CAD,TXN-100102,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00103,2026-09-28,163.18,CAD,TXN-100103,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00104,2026-09-03,863.60,CAD,TXN-100104,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00105,2026-09-23,127.36,CAD,TXN-100105,Yorkville Dental,Card payment - Yorkville Dental
+INT-00106,2026-09-22,300.54,CAD,TXN-100106,Queen West Florist,Card payment - Queen West Florist
+INT-00107,2026-09-09,92.35,CAD,TXN-100107,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00108,2026-09-15,31.35,CAD,TXN-100108,Yorkville Dental,Card payment - Yorkville Dental
+INT-00109,2026-09-10,93.38,CAD,TXN-100109,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00110,2026-09-27,115.93,CAD,TXN-100110,Yorkville Dental,Card payment - Yorkville Dental
+INT-00111,2026-09-25,243.22,CAD,TXN-100111,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00112,2026-09-02,52.44,CAD,TXN-100112,Scarborough Tire,Card payment - Scarborough Tire
+INT-00113,2026-09-26,166.76,CAD,TXN-100113,Junction Records,Card payment - Junction Records
+INT-00114,2026-09-26,185.63,CAD,TXN-100114,Junction Records,Card payment - Junction Records
+INT-00115,2026-09-26,63.25,CAD,TXN-100115,Junction Records,Card payment - Junction Records
+INT-00116,2026-09-24,139.97,CAD,TXN-100116,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00117,2026-09-24,36.84,CAD,TXN-100117,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00118,2026-09-29,33.74,CAD,TXN-100118,Junction Records,Card payment - Junction Records
+INT-00119,2026-09-04,27.51,CAD,TXN-100119,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00120,2026-09-05,280.97,CAD,TXN-100120,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00121,2026-09-07,59.63,CAD,TXN-100121,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00122,2026-09-21,26.12,CAD,TXN-100122,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00123,2026-09-21,77.73,CAD,TXN-100123,Midtown Optometry,Card payment - Midtown Optometry
+INT-00124,2026-09-27,81.64,CAD,TXN-100124,Greektown Taverna,Card payment - Greektown Taverna
+INT-00125,2026-09-28,111.92,CAD,TXN-100125,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00126,2026-09-01,44.04,CAD,TXN-100126,Queen West Florist,Card payment - Queen West Florist
+INT-00127,2026-09-12,86.82,CAD,TXN-100127,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00128,2026-09-21,18.14,CAD,TXN-100128,Joe's Cafe,Card payment - Joe's Cafe
+INT-00129,2026-09-15,165.56,CAD,TXN-100129,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00130,2026-09-18,72.70,CAD,TXN-100130,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00131,2026-09-07,60.52,CAD,TXN-100131,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00132,2026-09-11,115.42,CAD,TXN-100132,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00133,2026-09-11,197.36,CAD,TXN-100133,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00134,2026-09-11,90.42,CAD,TXN-100134,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00135,2026-09-14,16.21,CAD,TXN-100135,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00136,2026-09-17,23.81,CAD,TXN-100136,Union Fitness Club,Card payment - Union Fitness Club
+INT-00137,2026-09-19,108.93,CAD,TXN-100137,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00138,2026-09-23,42.66,CAD,TXN-100138,Greektown Taverna,Card payment - Greektown Taverna
+INT-00139,2026-09-03,17.41,CAD,TXN-100139,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00140,2026-09-24,179.19,CAD,TXN-100140,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00141,2026-09-03,57.25,CAD,TXN-100141,Kensington Grocers,Card payment - Kensington Grocers
+INT-00142,2026-09-14,23.54,CAD,TXN-100142,Bay Street Books,Card payment - Bay Street Books
+INT-00143,2026-09-20,39.77,CAD,TXN-100143,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00144,2026-09-14,19.59,CAD,TXN-100144,Queen West Florist,Card payment - Queen West Florist
+INT-00145,2026-09-24,55.57,CAD,TXN-100145,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00146,2026-09-06,54.68,CAD,TXN-100146,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00147,2026-09-13,108.58,CAD,TXN-100147,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00148,2026-09-29,28.41,CAD,TXN-100148,Greektown Taverna,Card payment - Greektown Taverna
+INT-00149,2026-09-20,214.06,CAD,TXN-100149,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00150,2026-09-25,23.56,CAD,TXN-100150,Scarborough Tire,Card payment - Scarborough Tire
+INT-00151,2026-09-12,19.65,CAD,TXN-100151,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00152,2026-09-28,95.60,CAD,TXN-100152,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00153,2026-09-19,19.71,CAD,TXN-100153,Midtown Optometry,Card payment - Midtown Optometry
+INT-00154,2026-09-27,84.33,CAD,TXN-100154,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00155,2026-09-10,53.89,CAD,TXN-100155,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00156,2026-09-22,19.95,CAD,TXN-100156,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00157,2026-09-21,88.88,CAD,TXN-100157,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00158,2026-09-22,466.06,CAD,TXN-100158,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00159,2026-09-12,35.57,CAD,TXN-100159,Yorkville Dental,Card payment - Yorkville Dental
+INT-00160,2026-09-28,68.42,CAD,TXN-100160,Bay Street Books,Card payment - Bay Street Books
+INT-00161,2026-09-06,118.13,CAD,TXN-100161,Queen West Florist,Card payment - Queen West Florist
+INT-00162,2026-09-20,404.41,CAD,TXN-100162,Yorkville Dental,Card payment - Yorkville Dental
+INT-00163,2026-09-07,126.57,CAD,TXN-100163,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00164,2026-09-14,31.67,CAD,TXN-100164,Queen West Florist,Card payment - Queen West Florist
+INT-00165,2026-09-09,11.00,CAD,TXN-100165,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00166,2026-09-17,54.66,CAD,TXN-100166,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00167,2026-09-17,30.42,CAD,TXN-100167,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00168,2026-09-05,118.57,CAD,TXN-100168,Greektown Taverna,Card payment - Greektown Taverna
+INT-00169,2026-09-09,209.81,CAD,TXN-100169,Union Fitness Club,Card payment - Union Fitness Club
+INT-00170,2026-09-02,36.57,CAD,TXN-100170,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00171,2026-09-21,100.65,CAD,TXN-100171,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00172,2026-09-06,115.01,CAD,TXN-100172,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00173,2026-09-02,50.46,CAD,TXN-100173,Midtown Optometry,Card payment - Midtown Optometry
+INT-00174,2026-09-22,15.43,CAD,TXN-100174,Midtown Optometry,Card payment - Midtown Optometry
+INT-00175,2026-09-21,336.21,CAD,TXN-100175,Queen West Florist,Card payment - Queen West Florist
+INT-00176,2026-09-15,47.77,CAD,TXN-100176,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00177,2026-09-27,63.90,CAD,TXN-100177,Junction Records,Card payment - Junction Records
+INT-00178,2026-09-26,56.69,CAD,TXN-100178,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00179,2026-09-16,260.54,CAD,TXN-100179,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00180,2026-09-06,46.76,CAD,TXN-100180,Junction Records,Card payment - Junction Records
+INT-00181,2026-09-14,104.77,CAD,TXN-100181,Queen West Florist,Card payment - Queen West Florist
+INT-00182,2026-09-26,10.91,CAD,TXN-100182,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00183,2026-09-20,47.73,CAD,TXN-100183,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00184,2026-09-25,84.99,CAD,TXN-100184,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00185,2026-09-01,24.40,CAD,TXN-100185,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00186,2026-09-20,39.03,CAD,TXN-100186,Yorkville Dental,Card payment - Yorkville Dental
+INT-00187,2026-09-28,162.74,CAD,TXN-100187,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00188,2026-09-17,32.08,CAD,TXN-100188,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00189,2026-09-19,5.00,CAD,TXN-100189,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00190,2026-09-23,63.06,CAD,TXN-100190,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00191,2026-09-15,101.92,CAD,TXN-100191,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00192,2026-09-02,69.41,CAD,TXN-100192,Bay Street Books,Card payment - Bay Street Books
+INT-00193,2026-09-17,136.00,CAD,TXN-100193,Yorkville Dental,Card payment - Yorkville Dental
+INT-00194,2026-09-17,13.95,CAD,TXN-100194,Midtown Optometry,Card payment - Midtown Optometry
+INT-00195,2026-09-17,117.80,CAD,TXN-100195,Midtown Optometry,Card payment - Midtown Optometry
+INT-00196,2026-09-14,102.26,CAD,TXN-100196,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00197,2026-09-26,51.14,CAD,TXN-100197,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00198,2026-09-11,44.83,CAD,TXN-100198,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00199,2026-09-04,60.91,CAD,TXN-100199,Kensington Grocers,Card payment - Kensington Grocers
+INT-00200,2026-09-28,101.63,CAD,TXN-100200,Queen West Florist,Card payment - Queen West Florist
+INT-00201,2026-09-16,23.49,CAD,TXN-100201,Joe's Cafe,Card payment - Joe's Cafe
+INT-00202,2026-09-02,62.36,CAD,TXN-100202,Yorkville Dental,Card payment - Yorkville Dental
+INT-00203,2026-09-29,295.15,CAD,TXN-100203,Kensington Grocers,Card payment - Kensington Grocers
+INT-00204,2026-09-12,39.17,CAD,TXN-100204,Junction Records,Card payment - Junction Records
+INT-00205,2026-09-04,76.76,CAD,TXN-100205,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00206,2026-09-02,358.61,CAD,TXN-100206,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00207,2026-09-11,43.33,CAD,TXN-100207,Queen West Florist,Card payment - Queen West Florist
+INT-00208,2026-09-27,35.76,CAD,TXN-100208,Joe's Cafe,Card payment - Joe's Cafe
+INT-00209,2026-09-21,78.01,CAD,TXN-100209,Greektown Taverna,Card payment - Greektown Taverna
+INT-00210,2026-09-20,123.72,CAD,TXN-100210,Greektown Taverna,Card payment - Greektown Taverna
+INT-00211,2026-09-11,11.71,CAD,TXN-100211,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00212,2026-09-17,63.20,CAD,TXN-100212,Union Fitness Club,Card payment - Union Fitness Club
+INT-00213,2026-09-25,276.24,CAD,TXN-100213,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00214,2026-09-10,275.55,CAD,TXN-100214,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00215,2026-09-26,44.77,CAD,TXN-100215,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00216,2026-09-26,42.34,CAD,TXN-100216,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00217,2026-09-07,133.58,CAD,TXN-100217,Union Fitness Club,Card payment - Union Fitness Club
+INT-00218,2026-09-29,38.39,CAD,TXN-100218,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00219,2026-09-05,14.56,CAD,TXN-100219,Joe's Cafe,Card payment - Joe's Cafe
+INT-00220,2026-09-21,85.30,CAD,TXN-100220,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00221,2026-09-14,9.68,CAD,TXN-100221,Queen West Florist,Card payment - Queen West Florist
+INT-00222,2026-09-04,76.10,CAD,TXN-100222,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00223,2026-09-04,39.07,CAD,TXN-100223,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00224,2026-09-04,25.45,CAD,TXN-100224,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00225,2026-09-01,46.67,CAD,TXN-100225,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00226,2026-09-03,91.88,CAD,TXN-100226,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00227,2026-09-08,22.12,CAD,TXN-100227,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00228,2026-09-04,40.37,CAD,TXN-100228,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00229,2026-09-08,62.68,CAD,TXN-100229,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00230,2026-09-27,236.22,CAD,TXN-100230,Union Fitness Club,Card payment - Union Fitness Club
+INT-00231,2026-09-04,24.71,CAD,TXN-100231,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00232,2026-09-23,56.22,CAD,TXN-100232,Scarborough Tire,Card payment - Scarborough Tire
+INT-00233,2026-09-19,88.00,CAD,TXN-100233,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00234,2026-09-19,22.84,CAD,TXN-100234,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00235,2026-09-16,44.66,CAD,TXN-100235,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00236,2026-09-30,36.40,CAD,TXN-100236,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00237,2026-09-21,55.19,CAD,TXN-100237,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00238,2026-09-21,54.41,CAD,TXN-100238,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00239,2026-09-21,55.21,CAD,TXN-100239,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00240,2026-09-12,98.65,CAD,TXN-100240,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00241,2026-09-04,92.75,CAD,TXN-100241,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00242,2026-09-28,16.76,CAD,TXN-100242,Greektown Taverna,Card payment - Greektown Taverna
+INT-00243,2026-09-22,55.47,CAD,TXN-100243,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00244,2026-09-12,229.31,CAD,TXN-100244,Midtown Optometry,Card payment - Midtown Optometry
+INT-00245,2026-09-06,72.03,CAD,TXN-100245,Greektown Taverna,Card payment - Greektown Taverna
+INT-00246,2026-09-18,31.62,CAD,TXN-100246,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00247,2026-09-03,102.34,CAD,TXN-100247,Junction Records,Card payment - Junction Records
+INT-00248,2026-09-25,146.20,CAD,TXN-100248,Scarborough Tire,Card payment - Scarborough Tire
+INT-00249,2026-09-01,63.88,CAD,TXN-100249,Union Fitness Club,Card payment - Union Fitness Club
+INT-00250,2026-09-10,57.49,CAD,TXN-100250,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00251,2026-09-24,120.81,CAD,TXN-100251,High Park Cycles,Card payment - High Park Cycles
+INT-00252,2026-09-08,31.83,CAD,TXN-100252,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00253,2026-09-19,66.47,CAD,TXN-100253,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00254,2026-09-24,10.74,CAD,TXN-100254,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00255,2026-09-28,133.56,CAD,TXN-100255,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00256,2026-09-15,72.56,CAD,TXN-100256,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00257,2026-09-01,293.91,CAD,TXN-100257,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00258,2026-09-07,83.18,CAD,TXN-100258,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00259,2026-09-08,17.46,CAD,TXN-100259,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00260,2026-09-13,60.22,CAD,TXN-100260,Junction Records,Card payment - Junction Records
+INT-00261,2026-09-28,132.33,CAD,TXN-100261,Bay Street Books,Card payment - Bay Street Books
+INT-00262,2026-09-19,114.71,CAD,TXN-100262,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00263,2026-09-06,12.75,CAD,TXN-100263,Scarborough Tire,Card payment - Scarborough Tire
+INT-00264,2026-09-12,29.69,CAD,TXN-100264,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00265,2026-09-09,65.20,CAD,TXN-100265,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00266,2026-09-10,95.43,CAD,TXN-100266,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00267,2026-09-04,49.59,CAD,TXN-100267,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00268,2026-09-17,82.07,CAD,TXN-100268,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00269,2026-09-22,33.18,CAD,TXN-100269,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00270,2026-09-14,64.95,CAD,TXN-100270,Yorkville Dental,Card payment - Yorkville Dental
+INT-00271,2026-09-15,24.12,CAD,TXN-100271,Bay Street Books,Card payment - Bay Street Books
+INT-00272,2026-09-27,34.00,CAD,TXN-100272,Midtown Optometry,Card payment - Midtown Optometry
+INT-00273,2026-09-26,45.90,CAD,TXN-100273,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00274,2026-09-06,7.27,CAD,TXN-100274,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00275,2026-09-10,42.45,CAD,TXN-100275,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00276,2026-09-13,75.81,CAD,TXN-100276,Junction Records,Card payment - Junction Records
+INT-00277,2026-09-30,29.89,CAD,TXN-100277,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00278,2026-09-06,99.31,CAD,TXN-100278,Midtown Optometry,Card payment - Midtown Optometry
+INT-00279,2026-09-04,12.23,CAD,TXN-100279,Kensington Grocers,Card payment - Kensington Grocers
+INT-00280,2026-09-19,66.75,CAD,TXN-100280,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00281,2026-09-03,443.93,CAD,TXN-100281,Bay Street Books,Card payment - Bay Street Books
+INT-00282,2026-09-12,61.63,CAD,TXN-100282,High Park Cycles,Card payment - High Park Cycles
+INT-00283,2026-09-22,70.46,CAD,TXN-100283,Queen West Florist,Card payment - Queen West Florist
+INT-00284,2026-09-21,16.23,CAD,TXN-100284,Queen West Florist,Card payment - Queen West Florist
+INT-00285,2026-09-13,99.28,CAD,TXN-100285,Joe's Cafe,Card payment - Joe's Cafe
+INT-00286,2026-09-15,75.08,CAD,TXN-100286,Bay Street Books,Card payment - Bay Street Books
+INT-00287,2026-09-15,14.16,CAD,TXN-100287,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00288,2026-09-22,45.65,CAD,TXN-100288,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00289,2026-09-20,81.46,CAD,TXN-100289,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00290,2026-09-10,262.69,CAD,TXN-100290,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00291,2026-09-17,65.06,CAD,TXN-100291,Midtown Optometry,Card payment - Midtown Optometry
+INT-00292,2026-09-01,36.69,CAD,TXN-100292,Greektown Taverna,Card payment - Greektown Taverna
+INT-00293,2026-09-19,30.43,CAD,TXN-100293,Bay Street Books,Card payment - Bay Street Books
+INT-00294,2026-09-14,190.96,CAD,TXN-100294,Bay Street Books,Card payment - Bay Street Books
+INT-00295,2026-09-28,116.47,CAD,TXN-100295,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00296,2026-09-18,79.82,CAD,TXN-100296,Kensington Grocers,Card payment - Kensington Grocers
+INT-00297,2026-09-22,57.67,CAD,TXN-100297,Bay Street Books,Card payment - Bay Street Books
+INT-00298,2026-09-22,64.16,CAD,TXN-100298,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00299,2026-09-26,18.22,CAD,TXN-100299,Greektown Taverna,Card payment - Greektown Taverna
+INT-00300,2026-09-11,253.51,CAD,TXN-100300,Scarborough Tire,Card payment - Scarborough Tire
+INT-00301,2026-09-13,65.88,CAD,TXN-100301,Union Fitness Club,Card payment - Union Fitness Club
+INT-00302,2026-09-26,5.83,CAD,TXN-100302,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00303,2026-09-22,28.34,CAD,TXN-100303,Midtown Optometry,Card payment - Midtown Optometry
+INT-00304,2026-09-01,63.98,CAD,TXN-100304,Union Fitness Club,Card payment - Union Fitness Club
+INT-00305,2026-09-11,245.84,CAD,TXN-100305,Bay Street Books,Card payment - Bay Street Books
+INT-00306,2026-09-26,25.31,CAD,TXN-100306,Bay Street Books,Card payment - Bay Street Books
+INT-00307,2026-09-19,81.75,CAD,TXN-100307,Joe's Cafe,Card payment - Joe's Cafe
+INT-00308,2026-09-28,172.37,CAD,TXN-100308,Union Fitness Club,Card payment - Union Fitness Club
+INT-00309,2026-09-08,89.74,CAD,TXN-100309,Kensington Grocers,Card payment - Kensington Grocers
+INT-00310,2026-09-20,30.25,CAD,TXN-100310,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00311,2026-09-16,90.68,CAD,TXN-100311,Midtown Optometry,Card payment - Midtown Optometry
+INT-00312,2026-09-27,50.94,CAD,TXN-100312,Scarborough Tire,Card payment - Scarborough Tire
+INT-00313,2026-09-09,164.89,CAD,TXN-100313,Union Fitness Club,Card payment - Union Fitness Club
+INT-00314,2026-09-18,34.92,CAD,TXN-100314,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00315,2026-09-03,14.45,CAD,TXN-100315,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00316,2026-09-05,40.84,CAD,TXN-100316,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00317,2026-09-04,168.76,CAD,TXN-100317,Greektown Taverna,Card payment - Greektown Taverna
+INT-00318,2026-09-19,20.11,CAD,TXN-100318,Midtown Optometry,Card payment - Midtown Optometry
+INT-00319,2026-09-25,431.81,CAD,TXN-100319,Bay Street Books,Card payment - Bay Street Books
+INT-00320,2026-09-01,22.15,CAD,TXN-100320,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00321,2026-09-23,90.92,CAD,TXN-100321,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00322,2026-09-19,11.03,CAD,TXN-100322,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00323,2026-09-15,123.06,CAD,TXN-100323,Yorkville Dental,Card payment - Yorkville Dental
+INT-00324,2026-09-19,108.67,CAD,TXN-100324,Yorkville Dental,Card payment - Yorkville Dental
+INT-00325,2026-09-18,114.20,CAD,TXN-100325,Greektown Taverna,Card payment - Greektown Taverna
+INT-00326,2026-09-01,333.11,CAD,TXN-100326,Greektown Taverna,Card payment - Greektown Taverna
+INT-00327,2026-09-02,95.61,CAD,TXN-100327,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00328,2026-09-24,85.81,CAD,TXN-100328,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00329,2026-09-05,7.71,CAD,TXN-100329,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00330,2026-09-03,59.53,CAD,TXN-100330,Union Fitness Club,Card payment - Union Fitness Club
+INT-00331,2026-09-09,23.95,CAD,TXN-100331,Bay Street Books,Card payment - Bay Street Books
+INT-00332,2026-09-08,56.34,CAD,TXN-100332,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00333,2026-09-28,80.80,CAD,TXN-100333,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00334,2026-09-27,147.83,CAD,TXN-100334,Greektown Taverna,Card payment - Greektown Taverna
+INT-00335,2026-09-03,203.68,CAD,TXN-100335,Union Fitness Club,Card payment - Union Fitness Club
+INT-00336,2026-09-15,20.02,CAD,TXN-100336,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00337,2026-09-07,35.61,CAD,TXN-100337,Queen West Florist,Card payment - Queen West Florist
+INT-00338,2026-09-29,64.36,CAD,TXN-100338,Junction Records,Card payment - Junction Records
+INT-00339,2026-09-05,74.28,CAD,TXN-100339,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00340,2026-09-16,239.95,CAD,TXN-100340,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00341,2026-09-01,11.38,CAD,TXN-100341,Greektown Taverna,Card payment - Greektown Taverna
+INT-00342,2026-09-22,9.37,CAD,TXN-100342,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00343,2026-09-27,19.54,CAD,TXN-100343,Queen West Florist,Card payment - Queen West Florist
+INT-00344,2026-09-23,39.26,CAD,TXN-100344,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00345,2026-09-06,78.26,CAD,TXN-100345,High Park Cycles,Card payment - High Park Cycles
+INT-00346,2026-09-06,96.37,CAD,TXN-100346,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00347,2026-09-06,55.73,CAD,TXN-100347,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00348,2026-09-06,117.97,CAD,TXN-100348,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00349,2026-09-01,208.24,CAD,TXN-100349,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00350,2026-09-19,109.63,CAD,TXN-100350,Bay Street Books,Card payment - Bay Street Books
+INT-00351,2026-09-09,44.04,CAD,TXN-100351,Union Fitness Club,Card payment - Union Fitness Club
+INT-00352,2026-09-14,215.13,CAD,TXN-100352,Queen West Florist,Card payment - Queen West Florist
+INT-00353,2026-09-26,140.48,CAD,TXN-100353,Scarborough Tire,Card payment - Scarborough Tire
+INT-00354,2026-09-09,32.54,CAD,TXN-100354,Bay Street Books,Card payment - Bay Street Books
+INT-00355,2026-09-21,89.37,CAD,TXN-100355,Queen West Florist,Card payment - Queen West Florist
+INT-00356,2026-09-18,278.33,CAD,TXN-100356,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00357,2026-09-18,28.88,CAD,TXN-100357,High Park Cycles,Card payment - High Park Cycles
+INT-00358,2026-09-07,63.67,CAD,TXN-100358,Queen West Florist,Card payment - Queen West Florist
+INT-00359,2026-09-13,48.33,CAD,TXN-100359,Queen West Florist,Card payment - Queen West Florist
+INT-00360,2026-09-08,74.95,CAD,TXN-100360,Kensington Grocers,Card payment - Kensington Grocers
+INT-00361,2026-09-25,42.60,CAD,TXN-100361,Scarborough Tire,Card payment - Scarborough Tire
+INT-00362,2026-09-08,39.91,CAD,TXN-100362,High Park Cycles,Card payment - High Park Cycles
+INT-00363,2026-09-15,38.43,CAD,TXN-100363,Queen West Florist,Card payment - Queen West Florist
+INT-00364,2026-09-21,133.63,CAD,TXN-100364,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00365,2026-09-09,40.02,CAD,TXN-100365,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00366,2026-09-19,23.22,CAD,TXN-100366,Greektown Taverna,Card payment - Greektown Taverna
+INT-00367,2026-09-20,91.01,CAD,TXN-100367,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00368,2026-09-29,43.70,CAD,TXN-100368,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00369,2026-09-28,36.58,CAD,TXN-100369,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00370,2026-09-03,23.58,CAD,TXN-100370,Union Fitness Club,Card payment - Union Fitness Club
+INT-00371,2026-09-03,114.70,CAD,TXN-100371,Yorkville Dental,Card payment - Yorkville Dental
+INT-00372,2026-09-15,9.23,CAD,TXN-100372,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00373,2026-09-16,8.10,CAD,TXN-100373,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00374,2026-09-29,229.38,CAD,TXN-100374,Kensington Grocers,Card payment - Kensington Grocers
+INT-00375,2026-09-25,318.50,CAD,TXN-100375,Union Fitness Club,Card payment - Union Fitness Club
+INT-00376,2026-09-25,113.85,CAD,TXN-100376,Greektown Taverna,Card payment - Greektown Taverna
+INT-00377,2026-09-26,206.47,CAD,TXN-100377,Yorkville Dental,Card payment - Yorkville Dental
+INT-00378,2026-09-07,35.25,CAD,TXN-100378,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00379,2026-09-27,84.23,CAD,TXN-100379,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00380,2026-09-09,45.90,CAD,TXN-100380,Midtown Optometry,Card payment - Midtown Optometry
+INT-00381,2026-09-26,53.64,CAD,TXN-100381,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00382,2026-09-13,160.22,CAD,TXN-100382,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00383,2026-09-16,48.80,CAD,TXN-100383,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00384,2026-09-16,9.54,CAD,TXN-100384,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00385,2026-09-16,109.60,CAD,TXN-100385,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00386,2026-09-08,22.53,CAD,TXN-100386,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00387,2026-09-16,259.42,CAD,TXN-100387,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00388,2026-09-22,72.13,CAD,TXN-100388,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00389,2026-09-19,49.11,CAD,TXN-100389,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00390,2026-09-16,109.52,CAD,TXN-100390,Greektown Taverna,Card payment - Greektown Taverna
+INT-00391,2026-09-13,54.66,CAD,TXN-100391,Joe's Cafe,Card payment - Joe's Cafe
+INT-00392,2026-09-08,105.18,CAD,TXN-100392,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00393,2026-09-02,238.09,CAD,TXN-100393,Yorkville Dental,Card payment - Yorkville Dental
+INT-00394,2026-09-16,105.89,CAD,TXN-100394,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00395,2026-09-01,67.23,CAD,TXN-100395,Scarborough Tire,Card payment - Scarborough Tire
+INT-00396,2026-09-20,137.25,CAD,TXN-100396,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00397,2026-09-04,18.53,CAD,TXN-100397,Junction Records,Card payment - Junction Records
+INT-00398,2026-09-04,72.46,CAD,TXN-100398,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00399,2026-09-04,37.28,CAD,TXN-100399,Yorkville Dental,Card payment - Yorkville Dental
+INT-00400,2026-09-04,104.14,CAD,TXN-100400,Yorkville Dental,Card payment - Yorkville Dental
+INT-00401,2026-09-04,16.24,CAD,TXN-100401,Yorkville Dental,Card payment - Yorkville Dental
+INT-00402,2026-09-16,83.62,CAD,TXN-100402,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00403,2026-09-15,45.45,CAD,TXN-100403,Yorkville Dental,Card payment - Yorkville Dental
+INT-00404,2026-09-29,93.55,CAD,TXN-100404,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00405,2026-09-20,120.91,CAD,TXN-100405,Kensington Grocers,Card payment - Kensington Grocers
+INT-00406,2026-09-23,249.28,CAD,TXN-100406,High Park Cycles,Card payment - High Park Cycles
+INT-00407,2026-09-30,62.67,CAD,TXN-100407,Scarborough Tire,Card payment - Scarborough Tire
+INT-00408,2026-09-06,49.92,CAD,TXN-100408,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00409,2026-09-09,25.25,CAD,TXN-100409,Midtown Optometry,Card payment - Midtown Optometry
+INT-00410,2026-09-23,10.51,CAD,TXN-100410,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00411,2026-09-18,18.33,CAD,TXN-100411,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00412,2026-09-18,23.93,CAD,TXN-100412,Midtown Optometry,Card payment - Midtown Optometry
+INT-00413,2026-09-15,20.67,CAD,TXN-100413,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00414,2026-09-01,460.56,CAD,TXN-100414,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00415,2026-09-02,147.79,CAD,TXN-100415,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00416,2026-09-22,20.24,CAD,TXN-100416,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00417,2026-09-06,9.38,CAD,TXN-100417,High Park Cycles,Card payment - High Park Cycles
+INT-00418,2026-09-28,32.40,CAD,TXN-100418,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00419,2026-09-19,21.63,CAD,TXN-100419,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00420,2026-09-17,146.98,CAD,TXN-100420,Greektown Taverna,Card payment - Greektown Taverna
+INT-00421,2026-09-20,67.37,CAD,TXN-100421,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00422,2026-09-05,42.56,CAD,TXN-100422,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00423,2026-09-05,19.51,CAD,TXN-100423,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00424,2026-09-30,9.40,CAD,TXN-100424,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00425,2026-09-17,103.82,CAD,TXN-100425,Junction Records,Card payment - Junction Records
+INT-00426,2026-09-23,841.16,CAD,TXN-100426,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00427,2026-09-02,12.45,CAD,TXN-100427,Union Fitness Club,Card payment - Union Fitness Club
+INT-00428,2026-09-10,114.45,CAD,TXN-100428,Union Fitness Club,Card payment - Union Fitness Club
+INT-00429,2026-09-26,25.09,CAD,TXN-100429,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00430,2026-09-24,181.13,CAD,TXN-100430,Kensington Grocers,Card payment - Kensington Grocers
+INT-00431,2026-09-25,79.95,CAD,TXN-100431,Scarborough Tire,Card payment - Scarborough Tire
+INT-00432,2026-09-06,69.01,CAD,TXN-100432,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00433,2026-09-28,344.35,CAD,TXN-100433,Kensington Grocers,Card payment - Kensington Grocers
+INT-00434,2026-09-11,39.26,CAD,TXN-100434,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00435,2026-09-03,38.58,CAD,TXN-100435,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00436,2026-09-20,61.03,CAD,TXN-100436,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00437,2026-09-21,156.76,CAD,TXN-100437,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00438,2026-09-04,17.08,CAD,TXN-100438,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00439,2026-09-17,61.07,CAD,TXN-100439,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00440,2026-09-25,76.51,CAD,TXN-100440,Junction Records,Card payment - Junction Records
+INT-00441,2026-09-07,129.00,CAD,TXN-100441,Junction Records,Card payment - Junction Records
+INT-00442,2026-09-02,44.16,CAD,TXN-100442,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00443,2026-09-13,95.06,CAD,TXN-100443,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00444,2026-09-24,42.86,CAD,TXN-100444,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00445,2026-09-30,23.82,CAD,TXN-100445,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00446,2026-09-16,70.79,CAD,TXN-100446,Queen West Florist,Card payment - Queen West Florist
+INT-00447,2026-09-29,80.26,CAD,TXN-100447,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00448,2026-09-21,33.90,CAD,TXN-100448,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00449,2026-09-28,58.39,CAD,TXN-100449,Greektown Taverna,Card payment - Greektown Taverna
+INT-00450,2026-09-19,197.25,CAD,TXN-100450,High Park Cycles,Card payment - High Park Cycles
+INT-00451,2026-09-15,86.37,CAD,TXN-100451,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00452,2026-09-06,17.36,CAD,TXN-100452,Joe's Cafe,Card payment - Joe's Cafe
+INT-00453,2026-09-11,60.98,CAD,TXN-100453,High Park Cycles,Card payment - High Park Cycles
+INT-00454,2026-09-03,126.97,CAD,TXN-100454,Kensington Grocers,Card payment - Kensington Grocers
+INT-00455,2026-09-28,197.29,CAD,TXN-100455,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00456,2026-09-29,55.05,CAD,TXN-100456,Junction Records,Card payment - Junction Records
+INT-00457,2026-09-17,48.41,CAD,TXN-100457,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00458,2026-09-17,60.27,CAD,TXN-100458,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00459,2026-09-05,37.97,CAD,TXN-100459,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00460,2026-09-12,61.19,CAD,TXN-100460,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00461,2026-09-17,29.90,CAD,TXN-100461,Midtown Optometry,Card payment - Midtown Optometry
+INT-00462,2026-09-29,69.49,CAD,TXN-100462,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00463,2026-09-16,59.11,CAD,TXN-100463,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00464,2026-09-23,101.99,CAD,TXN-100464,Bay Street Books,Card payment - Bay Street Books
+INT-00465,2026-09-06,12.75,CAD,TXN-100465,Midtown Optometry,Card payment - Midtown Optometry
+INT-00466,2026-09-06,257.08,CAD,TXN-100466,Kensington Grocers,Card payment - Kensington Grocers
+INT-00467,2026-09-07,91.02,CAD,TXN-100467,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00468,2026-09-19,15.75,CAD,TXN-100468,Greektown Taverna,Card payment - Greektown Taverna
+INT-00469,2026-09-03,53.69,CAD,TXN-100469,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00470,2026-09-06,314.02,CAD,TXN-100470,High Park Cycles,Card payment - High Park Cycles
+INT-00471,2026-09-01,108.30,CAD,TXN-100471,Greektown Taverna,Card payment - Greektown Taverna
+INT-00472,2026-09-26,137.34,CAD,TXN-100472,High Park Cycles,Card payment - High Park Cycles
+INT-00473,2026-09-30,56.04,CAD,TXN-100473,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00474,2026-09-19,143.19,CAD,TXN-100474,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00475,2026-09-19,30.13,CAD,TXN-100475,Kensington Grocers,Card payment - Kensington Grocers
+INT-00476,2026-09-26,63.88,CAD,TXN-100476,Junction Records,Card payment - Junction Records
+INT-00477,2026-09-23,176.82,CAD,TXN-100477,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00478,2026-09-26,222.17,CAD,TXN-100478,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00479,2026-09-16,59.94,CAD,TXN-100479,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00480,2026-09-13,93.49,CAD,TXN-100480,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00481,2026-09-07,265.14,CAD,TXN-100481,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00482,2026-09-02,129.99,CAD,TXN-100482,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00483,2026-09-23,280.59,CAD,TXN-100483,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00484,2026-09-07,317.58,CAD,TXN-100484,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00485,2026-09-10,207.95,CAD,TXN-100485,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00486,2026-09-25,1001.83,CAD,TXN-100486,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00487,2026-09-26,95.07,CAD,TXN-100487,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00488,2026-09-23,43.44,CAD,TXN-100488,Kensington Grocers,Card payment - Kensington Grocers
+INT-00489,2026-09-07,66.55,CAD,TXN-100489,Scarborough Tire,Card payment - Scarborough Tire
+INT-00490,2026-09-04,149.38,CAD,TXN-100490,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00491,2026-09-16,204.01,CAD,TXN-100491,Scarborough Tire,Card payment - Scarborough Tire
+INT-00492,2026-09-14,12.31,CAD,TXN-100492,High Park Cycles,Card payment - High Park Cycles
+INT-00493,2026-09-23,80.27,CAD,TXN-100493,Joe's Cafe,Card payment - Joe's Cafe
+INT-00494,2026-09-20,44.12,CAD,TXN-100494,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00495,2026-09-09,37.75,CAD,TXN-100495,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00496,2026-09-13,24.58,CAD,TXN-100496,Union Fitness Club,Card payment - Union Fitness Club
+INT-00497,2026-09-02,31.81,CAD,TXN-100497,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00498,2026-09-11,40.92,CAD,TXN-100498,Kensington Grocers,Card payment - Kensington Grocers
+INT-00499,2026-09-22,22.28,CAD,TXN-100499,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00500,2026-09-17,143.59,CAD,TXN-100500,High Park Cycles,Card payment - High Park Cycles
+INT-00501,2026-09-05,48.84,CAD,TXN-100501,Queen West Florist,Card payment - Queen West Florist
+INT-00502,2026-09-05,33.91,CAD,TXN-100502,Queen West Florist,Card payment - Queen West Florist
+INT-00503,2026-09-23,87.28,CAD,TXN-100503,Kensington Grocers,Card payment - Kensington Grocers
+INT-00504,2026-09-15,31.29,CAD,TXN-100504,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00505,2026-09-04,72.01,CAD,TXN-100505,Bay Street Books,Card payment - Bay Street Books
+INT-00506,2026-09-05,537.70,CAD,TXN-100506,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00507,2026-09-05,406.85,CAD,TXN-100507,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00508,2026-09-23,19.31,CAD,TXN-100508,Junction Records,Card payment - Junction Records
+INT-00509,2026-09-08,57.88,CAD,TXN-100509,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00510,2026-09-25,42.34,CAD,TXN-100510,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00511,2026-09-25,208.84,CAD,TXN-100511,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00512,2026-09-14,17.20,CAD,TXN-100512,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00513,2026-09-08,300.62,CAD,TXN-100513,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00514,2026-09-03,58.79,CAD,TXN-100514,Queen West Florist,Card payment - Queen West Florist
+INT-00515,2026-09-18,38.85,CAD,TXN-100515,Joe's Cafe,Card payment - Joe's Cafe
+INT-00516,2026-09-05,65.68,CAD,TXN-100516,Joe's Cafe,Card payment - Joe's Cafe
+INT-00517,2026-09-02,31.65,CAD,TXN-100517,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00518,2026-09-27,12.25,CAD,TXN-100518,Kensington Grocers,Card payment - Kensington Grocers
+INT-00519,2026-09-25,413.63,CAD,TXN-100519,Bay Street Books,Card payment - Bay Street Books
+INT-00520,2026-09-24,154.29,CAD,TXN-100520,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00521,2026-09-02,40.80,CAD,TXN-100521,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00522,2026-09-13,153.56,CAD,TXN-100522,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00523,2026-09-03,942.98,CAD,TXN-100523,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00524,2026-09-05,416.20,CAD,TXN-100524,High Park Cycles,Card payment - High Park Cycles
+INT-00525,2026-09-09,64.04,CAD,TXN-100525,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00526,2026-09-18,39.96,CAD,TXN-100526,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00527,2026-09-09,93.99,CAD,TXN-100527,Junction Records,Card payment - Junction Records
+INT-00528,2026-09-03,14.70,CAD,TXN-100528,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00529,2026-09-04,69.29,CAD,TXN-100529,Bay Street Books,Card payment - Bay Street Books
+INT-00530,2026-09-07,47.59,CAD,TXN-100530,Bay Street Books,Card payment - Bay Street Books
+INT-00531,2026-09-01,174.83,CAD,TXN-100531,Union Fitness Club,Card payment - Union Fitness Club
+INT-00532,2026-09-02,25.71,CAD,TXN-100532,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00533,2026-09-18,24.24,CAD,TXN-100533,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00534,2026-09-14,12.36,CAD,TXN-100534,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00535,2026-09-06,53.01,CAD,TXN-100535,Junction Records,Card payment - Junction Records
+INT-00536,2026-09-18,165.01,CAD,TXN-100536,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00537,2026-09-07,58.29,CAD,TXN-100537,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00538,2026-09-29,35.06,CAD,TXN-100538,Yorkville Dental,Card payment - Yorkville Dental
+INT-00539,2026-09-04,62.02,CAD,TXN-100539,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00540,2026-09-10,85.84,CAD,TXN-100540,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00541,2026-09-29,378.14,CAD,TXN-100541,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00542,2026-09-19,126.65,CAD,TXN-100542,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00543,2026-09-28,82.74,CAD,TXN-100543,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00544,2026-09-08,49.48,CAD,TXN-100544,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00545,2026-09-11,57.60,CAD,TXN-100545,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00546,2026-09-23,145.38,CAD,TXN-100546,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00547,2026-09-24,43.72,CAD,TXN-100547,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00548,2026-09-14,47.23,CAD,TXN-100548,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00549,2026-09-26,93.68,CAD,TXN-100549,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00550,2026-09-28,22.39,CAD,TXN-100550,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00551,2026-09-25,81.44,CAD,TXN-100551,Kensington Grocers,Card payment - Kensington Grocers
+INT-00552,2026-09-22,13.70,CAD,TXN-100552,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00553,2026-09-09,330.07,CAD,TXN-100553,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00554,2026-09-17,27.02,CAD,TXN-100554,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00555,2026-09-01,29.11,CAD,TXN-100555,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00556,2026-09-12,85.89,CAD,TXN-100556,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00557,2026-09-09,86.97,CAD,TXN-100557,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00558,2026-09-05,37.49,CAD,TXN-100558,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00559,2026-09-23,202.25,CAD,TXN-100559,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00560,2026-09-18,28.12,CAD,TXN-100560,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00561,2026-09-24,167.52,CAD,TXN-100561,Midtown Optometry,Card payment - Midtown Optometry
+INT-00562,2026-09-20,29.03,CAD,TXN-100562,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00563,2026-09-23,62.01,CAD,TXN-100563,Greektown Taverna,Card payment - Greektown Taverna
+INT-00564,2026-09-05,36.40,CAD,TXN-100564,Queen West Florist,Card payment - Queen West Florist
+INT-00565,2026-09-16,40.51,CAD,TXN-100565,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00566,2026-09-13,31.70,CAD,TXN-100566,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00567,2026-09-02,69.94,CAD,TXN-100567,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00568,2026-09-13,120.51,CAD,TXN-100568,Yorkville Dental,Card payment - Yorkville Dental
+INT-00569,2026-09-15,50.96,CAD,TXN-100569,Midtown Optometry,Card payment - Midtown Optometry
+INT-00570,2026-09-15,19.88,CAD,TXN-100570,Joe's Cafe,Card payment - Joe's Cafe
+INT-00571,2026-09-21,338.81,CAD,TXN-100571,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00572,2026-09-23,81.93,CAD,TXN-100572,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00573,2026-09-22,36.23,CAD,TXN-100573,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00574,2026-09-06,65.96,CAD,TXN-100574,Bay Street Books,Card payment - Bay Street Books
+INT-00575,2026-09-03,81.82,CAD,TXN-100575,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00576,2026-09-02,50.76,CAD,TXN-100576,Midtown Optometry,Card payment - Midtown Optometry
+INT-00577,2026-09-02,57.05,CAD,TXN-100577,Bay Street Books,Card payment - Bay Street Books
+INT-00578,2026-09-12,27.20,CAD,TXN-100578,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00579,2026-09-03,63.35,CAD,TXN-100579,Yorkville Dental,Card payment - Yorkville Dental
+INT-00580,2026-09-07,13.57,CAD,TXN-100580,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00581,2026-09-11,51.45,CAD,TXN-100581,Kensington Grocers,Card payment - Kensington Grocers
+INT-00582,2026-09-29,37.27,CAD,TXN-100582,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00583,2026-09-04,248.34,CAD,TXN-100583,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00584,2026-09-23,44.39,CAD,TXN-100584,Yorkville Dental,Card payment - Yorkville Dental
+INT-00585,2026-09-11,45.95,CAD,TXN-100585,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00586,2026-09-11,62.71,CAD,TXN-100586,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00587,2026-09-11,24.86,CAD,TXN-100587,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00588,2026-09-15,71.86,CAD,TXN-100588,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00589,2026-09-11,147.83,CAD,TXN-100589,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00590,2026-09-06,8.31,CAD,TXN-100590,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00591,2026-09-12,138.29,CAD,TXN-100591,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00592,2026-09-30,61.00,CAD,TXN-100592,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00593,2026-09-29,29.68,CAD,TXN-100593,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00594,2026-09-24,43.15,CAD,TXN-100594,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00595,2026-09-23,28.19,CAD,TXN-100595,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00596,2026-09-02,73.19,CAD,TXN-100596,Bay Street Books,Card payment - Bay Street Books
+INT-00597,2026-09-07,40.18,CAD,TXN-100597,Yorkville Dental,Card payment - Yorkville Dental
+INT-00598,2026-09-04,332.55,CAD,TXN-100598,Joe's Cafe,Card payment - Joe's Cafe
+INT-00599,2026-09-05,200.74,CAD,TXN-100599,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00600,2026-09-05,58.01,CAD,TXN-100600,Joe's Cafe,Card payment - Joe's Cafe
+INT-00601,2026-09-23,340.50,CAD,TXN-100601,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00602,2026-09-23,117.39,CAD,TXN-100602,Greektown Taverna,Card payment - Greektown Taverna
+INT-00603,2026-09-10,173.28,CAD,TXN-100603,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00604,2026-09-20,190.29,CAD,TXN-100604,Kensington Grocers,Card payment - Kensington Grocers
+INT-00605,2026-09-16,43.56,CAD,TXN-100605,Bay Street Books,Card payment - Bay Street Books
+INT-00606,2026-09-17,40.05,CAD,TXN-100606,Bay Street Books,Card payment - Bay Street Books
+INT-00607,2026-09-13,46.87,CAD,TXN-100607,Scarborough Tire,Card payment - Scarborough Tire
+INT-00608,2026-09-27,127.89,CAD,TXN-100608,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00609,2026-09-06,182.13,CAD,TXN-100609,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00610,2026-09-27,555.95,CAD,TXN-100610,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00611,2026-09-05,369.11,CAD,TXN-100611,Scarborough Tire,Card payment - Scarborough Tire
+INT-00612,2026-09-20,60.17,CAD,TXN-100612,Scarborough Tire,Card payment - Scarborough Tire
+INT-00613,2026-09-30,94.78,CAD,TXN-100613,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00614,2026-09-28,28.80,CAD,TXN-100614,Yorkville Dental,Card payment - Yorkville Dental
+INT-00615,2026-09-13,58.74,CAD,TXN-100615,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00616,2026-09-30,124.04,CAD,TXN-100616,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00617,2026-09-05,129.77,CAD,TXN-100617,Joe's Cafe,Card payment - Joe's Cafe
+INT-00618,2026-09-26,94.51,CAD,TXN-100618,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00619,2026-09-06,97.76,CAD,TXN-100619,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00620,2026-09-02,95.25,CAD,TXN-100620,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00621,2026-09-17,149.11,CAD,TXN-100621,Greektown Taverna,Card payment - Greektown Taverna
+INT-00622,2026-09-24,185.36,CAD,TXN-100622,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00623,2026-09-16,69.18,CAD,TXN-100623,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00624,2026-09-23,273.28,CAD,TXN-100624,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00625,2026-09-02,87.28,CAD,TXN-100625,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00626,2026-09-20,41.80,CAD,TXN-100626,Kensington Grocers,Card payment - Kensington Grocers
+INT-00627,2026-09-06,118.05,CAD,TXN-100627,Kensington Grocers,Card payment - Kensington Grocers
+INT-00628,2026-09-20,549.14,CAD,TXN-100628,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00629,2026-09-06,142.45,CAD,TXN-100629,Union Fitness Club,Card payment - Union Fitness Club
+INT-00630,2026-09-13,19.92,CAD,TXN-100630,High Park Cycles,Card payment - High Park Cycles
+INT-00631,2026-09-17,52.15,CAD,TXN-100631,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00632,2026-09-21,47.10,CAD,TXN-100632,Kensington Grocers,Card payment - Kensington Grocers
+INT-00633,2026-09-24,160.71,CAD,TXN-100633,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00634,2026-09-22,59.92,CAD,TXN-100634,Joe's Cafe,Card payment - Joe's Cafe
+INT-00635,2026-09-02,289.89,CAD,TXN-100635,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00636,2026-09-22,276.68,CAD,TXN-100636,Greektown Taverna,Card payment - Greektown Taverna
+INT-00637,2026-09-03,257.55,CAD,TXN-100637,Midtown Optometry,Card payment - Midtown Optometry
+INT-00638,2026-09-13,50.65,CAD,TXN-100638,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00639,2026-09-07,41.77,CAD,TXN-100639,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00640,2026-09-04,96.62,CAD,TXN-100640,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00641,2026-09-16,20.68,CAD,TXN-100641,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00642,2026-09-25,63.01,CAD,TXN-100642,High Park Cycles,Card payment - High Park Cycles
+INT-00643,2026-09-27,62.55,CAD,TXN-100643,Greektown Taverna,Card payment - Greektown Taverna
+INT-00644,2026-09-21,16.15,CAD,TXN-100644,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00645,2026-09-06,21.01,CAD,TXN-100645,Junction Records,Card payment - Junction Records
+INT-00646,2026-09-12,11.64,CAD,TXN-100646,High Park Cycles,Card payment - High Park Cycles
+INT-00647,2026-09-19,65.51,CAD,TXN-100647,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00648,2026-09-02,107.44,CAD,TXN-100648,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00649,2026-09-16,84.88,CAD,TXN-100649,Midtown Optometry,Card payment - Midtown Optometry
+INT-00650,2026-09-04,189.23,CAD,TXN-100650,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00651,2026-09-20,28.61,CAD,TXN-100651,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00652,2026-09-19,454.59,CAD,TXN-100652,Junction Records,Card payment - Junction Records
+INT-00653,2026-09-14,131.45,CAD,TXN-100653,Queen West Florist,Card payment - Queen West Florist
+INT-00654,2026-09-28,145.59,CAD,TXN-100654,Midtown Optometry,Card payment - Midtown Optometry
+INT-00655,2026-09-26,63.91,CAD,TXN-100655,Greektown Taverna,Card payment - Greektown Taverna
+INT-00656,2026-09-06,138.79,CAD,TXN-100656,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00657,2026-09-01,41.99,CAD,TXN-100657,Junction Records,Card payment - Junction Records
+INT-00658,2026-09-22,43.46,CAD,TXN-100658,Union Fitness Club,Card payment - Union Fitness Club
+INT-00659,2026-09-22,22.57,CAD,TXN-100659,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00660,2026-09-25,156.96,CAD,TXN-100660,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00661,2026-09-11,15.81,CAD,TXN-100661,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00662,2026-09-08,56.33,CAD,TXN-100662,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00663,2026-09-05,224.11,CAD,TXN-100663,Union Fitness Club,Card payment - Union Fitness Club
+INT-00664,2026-09-09,51.32,CAD,TXN-100664,Union Fitness Club,Card payment - Union Fitness Club
+INT-00665,2026-09-06,7.95,CAD,TXN-100665,Greektown Taverna,Card payment - Greektown Taverna
+INT-00666,2026-09-03,196.18,CAD,TXN-100666,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00667,2026-09-14,143.28,CAD,TXN-100667,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00668,2026-09-14,17.43,CAD,TXN-100668,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00669,2026-09-23,60.54,CAD,TXN-100669,Bay Street Books,Card payment - Bay Street Books
+INT-00670,2026-09-10,85.68,CAD,TXN-100670,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00671,2026-09-24,17.34,CAD,TXN-100671,Scarborough Tire,Card payment - Scarborough Tire
+INT-00672,2026-09-12,57.37,CAD,TXN-100672,Midtown Optometry,Card payment - Midtown Optometry
+INT-00673,2026-09-14,91.72,CAD,TXN-100673,Greektown Taverna,Card payment - Greektown Taverna
+INT-00674,2026-09-30,53.44,CAD,TXN-100674,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00675,2026-09-12,89.11,CAD,TXN-100675,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00676,2026-09-07,21.24,CAD,TXN-100676,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00677,2026-09-17,58.80,CAD,TXN-100677,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00678,2026-09-04,182.55,CAD,TXN-100678,High Park Cycles,Card payment - High Park Cycles
+INT-00679,2026-09-29,23.43,CAD,TXN-100679,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00680,2026-09-04,35.16,CAD,TXN-100680,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00681,2026-09-22,236.75,CAD,TXN-100681,Junction Records,Card payment - Junction Records
+INT-00682,2026-09-01,195.69,CAD,TXN-100682,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00683,2026-09-22,73.93,CAD,TXN-100683,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00684,2026-09-09,29.04,CAD,TXN-100684,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00685,2026-09-20,105.37,CAD,TXN-100685,Queen West Florist,Card payment - Queen West Florist
+INT-00686,2026-09-20,48.22,CAD,TXN-100686,Queen West Florist,Card payment - Queen West Florist
+INT-00687,2026-09-07,173.51,CAD,TXN-100687,Junction Records,Card payment - Junction Records
+INT-00688,2026-09-18,77.06,CAD,TXN-100688,Yorkville Dental,Card payment - Yorkville Dental
+INT-00689,2026-09-26,50.37,CAD,TXN-100689,Scarborough Tire,Card payment - Scarborough Tire
+INT-00690,2026-09-22,84.16,CAD,TXN-100690,Junction Records,Card payment - Junction Records
+INT-00691,2026-09-19,74.21,CAD,TXN-100691,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00692,2026-09-20,67.95,CAD,TXN-100692,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00693,2026-09-01,47.17,CAD,TXN-100693,Yorkville Dental,Card payment - Yorkville Dental
+INT-00694,2026-09-26,235.20,CAD,TXN-100694,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00695,2026-09-16,22.73,CAD,TXN-100695,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00696,2026-09-05,30.44,CAD,TXN-100696,Union Fitness Club,Card payment - Union Fitness Club
+INT-00697,2026-09-18,62.92,CAD,TXN-100697,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00698,2026-09-22,51.84,CAD,TXN-100698,Yorkville Dental,Card payment - Yorkville Dental
+INT-00699,2026-09-03,164.84,CAD,TXN-100699,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00700,2026-09-02,6.76,CAD,TXN-100700,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00701,2026-09-21,24.93,CAD,TXN-100701,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00702,2026-09-06,44.67,CAD,TXN-100702,Junction Records,Card payment - Junction Records
+INT-00703,2026-09-12,45.57,CAD,TXN-100703,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00704,2026-09-04,33.62,CAD,TXN-100704,Union Fitness Club,Card payment - Union Fitness Club
+INT-00705,2026-09-04,234.16,CAD,TXN-100705,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00706,2026-09-20,123.78,CAD,TXN-100706,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00707,2026-09-23,101.41,CAD,TXN-100707,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00708,2026-09-26,68.17,CAD,TXN-100708,Bay Street Books,Card payment - Bay Street Books
+INT-00709,2026-09-03,191.36,CAD,TXN-100709,Yorkville Dental,Card payment - Yorkville Dental
+INT-00710,2026-09-19,31.48,CAD,TXN-100710,Union Fitness Club,Card payment - Union Fitness Club
+INT-00711,2026-09-06,204.41,CAD,TXN-100711,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00712,2026-09-07,8.49,CAD,TXN-100712,Yorkville Dental,Card payment - Yorkville Dental
+INT-00713,2026-09-28,58.59,CAD,TXN-100713,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00714,2026-09-13,37.67,CAD,TXN-100714,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00715,2026-09-05,262.81,CAD,TXN-100715,High Park Cycles,Card payment - High Park Cycles
+INT-00716,2026-09-15,213.82,CAD,TXN-100716,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00717,2026-09-14,151.41,CAD,TXN-100717,Union Fitness Club,Card payment - Union Fitness Club
+INT-00718,2026-09-13,77.91,CAD,TXN-100718,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00719,2026-09-28,107.97,CAD,TXN-100719,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00720,2026-09-13,68.07,CAD,TXN-100720,High Park Cycles,Card payment - High Park Cycles
+INT-00721,2026-09-21,184.23,CAD,TXN-100721,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00722,2026-09-05,82.13,CAD,TXN-100722,Yorkville Dental,Card payment - Yorkville Dental
+INT-00723,2026-09-22,65.34,CAD,TXN-100723,High Park Cycles,Card payment - High Park Cycles
+INT-00724,2026-09-04,39.50,CAD,TXN-100724,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00725,2026-09-28,23.69,CAD,TXN-100725,Greektown Taverna,Card payment - Greektown Taverna
+INT-00726,2026-09-04,147.67,CAD,TXN-100726,Scarborough Tire,Card payment - Scarborough Tire
+INT-00727,2026-09-09,83.59,CAD,TXN-100727,High Park Cycles,Card payment - High Park Cycles
+INT-00728,2026-09-02,148.25,CAD,TXN-100728,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00729,2026-09-12,33.85,CAD,TXN-100729,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00730,2026-09-23,22.09,CAD,TXN-100730,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00731,2026-09-14,16.50,CAD,TXN-100731,Kensington Grocers,Card payment - Kensington Grocers
+INT-00732,2026-09-19,113.17,CAD,TXN-100732,Bay Street Books,Card payment - Bay Street Books
+INT-00733,2026-09-12,18.85,CAD,TXN-100733,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00734,2026-09-12,39.80,CAD,TXN-100734,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00735,2026-09-12,119.21,CAD,TXN-100735,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00736,2026-09-03,50.90,CAD,TXN-100736,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00737,2026-09-10,152.63,CAD,TXN-100737,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00738,2026-09-15,109.55,CAD,TXN-100738,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00739,2026-09-22,168.00,CAD,TXN-100739,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00740,2026-09-15,13.72,CAD,TXN-100740,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00741,2026-09-15,255.30,CAD,TXN-100741,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00742,2026-09-15,40.25,CAD,TXN-100742,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00743,2026-09-20,56.60,CAD,TXN-100743,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00744,2026-09-14,84.39,CAD,TXN-100744,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00745,2026-09-09,83.10,CAD,TXN-100745,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00746,2026-09-29,44.28,CAD,TXN-100746,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00747,2026-09-29,678.14,CAD,TXN-100747,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00748,2026-09-27,133.31,CAD,TXN-100748,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00749,2026-09-08,35.37,CAD,TXN-100749,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00750,2026-09-06,243.32,CAD,TXN-100750,Union Fitness Club,Card payment - Union Fitness Club
+INT-00751,2026-09-16,38.77,CAD,TXN-100751,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00752,2026-09-29,35.87,CAD,TXN-100752,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00753,2026-09-18,164.51,CAD,TXN-100753,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00754,2026-09-10,7.20,CAD,TXN-100754,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00755,2026-09-29,192.18,CAD,TXN-100755,Greektown Taverna,Card payment - Greektown Taverna
+INT-00756,2026-09-27,351.12,CAD,TXN-100756,Bay Street Books,Card payment - Bay Street Books
+INT-00757,2026-09-25,87.13,CAD,TXN-100757,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00758,2026-09-10,76.06,CAD,TXN-100758,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00759,2026-09-26,36.88,CAD,TXN-100759,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00760,2026-09-14,543.89,CAD,TXN-100760,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00761,2026-09-14,44.41,CAD,TXN-100761,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00762,2026-09-14,218.54,CAD,TXN-100762,Greektown Taverna,Card payment - Greektown Taverna
+INT-00763,2026-09-27,34.91,CAD,TXN-100763,Kensington Grocers,Card payment - Kensington Grocers
+INT-00764,2026-09-27,102.69,CAD,TXN-100764,Yorkville Dental,Card payment - Yorkville Dental
+INT-00765,2026-09-09,473.72,CAD,TXN-100765,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00766,2026-09-05,224.93,CAD,TXN-100766,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00767,2026-09-18,62.20,CAD,TXN-100767,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00768,2026-09-22,24.40,CAD,TXN-100768,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00769,2026-09-05,138.55,CAD,TXN-100769,High Park Cycles,Card payment - High Park Cycles
+INT-00770,2026-09-16,318.57,CAD,TXN-100770,Greektown Taverna,Card payment - Greektown Taverna
+INT-00771,2026-09-02,18.93,CAD,TXN-100771,High Park Cycles,Card payment - High Park Cycles
+INT-00772,2026-09-23,63.74,CAD,TXN-100772,Junction Records,Card payment - Junction Records
+INT-00773,2026-09-06,586.95,CAD,TXN-100773,Queen West Florist,Card payment - Queen West Florist
+INT-00774,2026-09-06,157.75,CAD,TXN-100774,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00775,2026-09-22,44.75,CAD,TXN-100775,Bay Street Books,Card payment - Bay Street Books
+INT-00776,2026-09-22,104.70,CAD,TXN-100776,Bay Street Books,Card payment - Bay Street Books
+INT-00777,2026-09-01,187.02,CAD,TXN-100777,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00778,2026-09-02,49.17,CAD,TXN-100778,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00779,2026-09-07,49.99,CAD,TXN-100779,Queen West Florist,Card payment - Queen West Florist
+INT-00780,2026-09-30,321.24,CAD,TXN-100780,Yorkville Dental,Card payment - Yorkville Dental
+INT-00781,2026-09-22,190.94,CAD,TXN-100781,Bay Street Books,Card payment - Bay Street Books
+INT-00782,2026-09-20,22.29,CAD,TXN-100782,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00783,2026-09-17,147.80,CAD,TXN-100783,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00784,2026-09-03,100.16,CAD,TXN-100784,High Park Cycles,Card payment - High Park Cycles
+INT-00785,2026-09-03,69.56,CAD,TXN-100785,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00786,2026-09-03,67.08,CAD,TXN-100786,Greektown Taverna,Card payment - Greektown Taverna
+INT-00787,2026-09-14,31.28,CAD,TXN-100787,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00788,2026-09-30,41.10,CAD,TXN-100788,Queen West Florist,Card payment - Queen West Florist
+INT-00789,2026-09-28,18.07,CAD,TXN-100789,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00790,2026-09-15,43.46,CAD,TXN-100790,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00791,2026-09-03,33.24,CAD,TXN-100791,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00792,2026-09-21,100.46,CAD,TXN-100792,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00793,2026-09-01,36.29,CAD,TXN-100793,Bay Street Books,Card payment - Bay Street Books
+INT-00794,2026-09-19,22.85,CAD,TXN-100794,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00795,2026-09-23,164.95,CAD,TXN-100795,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00796,2026-09-24,139.62,CAD,TXN-100796,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00797,2026-09-03,188.80,CAD,TXN-100797,Kensington Grocers,Card payment - Kensington Grocers
+INT-00798,2026-09-01,44.47,CAD,TXN-100798,Queen West Florist,Card payment - Queen West Florist
+INT-00799,2026-09-11,453.12,CAD,TXN-100799,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00800,2026-09-27,96.35,CAD,TXN-100800,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00801,2026-09-24,89.67,CAD,TXN-100801,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00802,2026-09-16,26.46,CAD,TXN-100802,Yorkville Dental,Card payment - Yorkville Dental
+INT-00803,2026-09-06,50.39,CAD,TXN-100803,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00804,2026-09-26,407.09,CAD,TXN-100804,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00805,2026-09-27,146.01,CAD,TXN-100805,Greektown Taverna,Card payment - Greektown Taverna
+INT-00806,2026-09-04,37.53,CAD,TXN-100806,Union Fitness Club,Card payment - Union Fitness Club
+INT-00807,2026-09-05,174.09,CAD,TXN-100807,Bay Street Books,Card payment - Bay Street Books
+INT-00808,2026-09-17,24.03,CAD,TXN-100808,Queen West Florist,Card payment - Queen West Florist
+INT-00809,2026-09-17,111.54,CAD,TXN-100809,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00810,2026-09-17,53.51,CAD,TXN-100810,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00811,2026-09-25,56.38,CAD,TXN-100811,Queen West Florist,Card payment - Queen West Florist
+INT-00812,2026-09-21,234.33,CAD,TXN-100812,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00813,2026-09-29,81.43,CAD,TXN-100813,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00814,2026-09-15,24.54,CAD,TXN-100814,Midtown Optometry,Card payment - Midtown Optometry
+INT-00815,2026-09-03,73.31,CAD,TXN-100815,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00816,2026-09-18,76.36,CAD,TXN-100816,Yorkville Dental,Card payment - Yorkville Dental
+INT-00817,2026-09-10,52.39,CAD,TXN-100817,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00818,2026-09-10,229.54,CAD,TXN-100818,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00819,2026-09-10,74.62,CAD,TXN-100819,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00820,2026-09-26,342.25,CAD,TXN-100820,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00821,2026-09-23,69.43,CAD,TXN-100821,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00822,2026-09-05,54.86,CAD,TXN-100822,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00823,2026-09-03,105.33,CAD,TXN-100823,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00824,2026-09-05,9.08,CAD,TXN-100824,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00825,2026-09-02,20.05,CAD,TXN-100825,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00826,2026-09-19,36.93,CAD,TXN-100826,Yorkville Dental,Card payment - Yorkville Dental
+INT-00827,2026-09-10,65.38,CAD,TXN-100827,Yorkville Dental,Card payment - Yorkville Dental
+INT-00828,2026-09-10,59.67,CAD,TXN-100828,Scarborough Tire,Card payment - Scarborough Tire
+INT-00829,2026-09-15,57.95,CAD,TXN-100829,Greektown Taverna,Card payment - Greektown Taverna
+INT-00830,2026-09-13,301.83,CAD,TXN-100830,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00831,2026-09-26,138.31,CAD,TXN-100831,Greektown Taverna,Card payment - Greektown Taverna
+INT-00832,2026-09-18,76.29,CAD,TXN-100832,Scarborough Tire,Card payment - Scarborough Tire
+INT-00833,2026-09-07,76.26,CAD,TXN-100833,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00834,2026-09-01,56.47,CAD,TXN-100834,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00835,2026-09-18,44.45,CAD,TXN-100835,Queen West Florist,Card payment - Queen West Florist
+INT-00836,2026-09-11,51.93,CAD,TXN-100836,Queen West Florist,Card payment - Queen West Florist
+INT-00837,2026-09-08,81.13,CAD,TXN-100837,Greektown Taverna,Card payment - Greektown Taverna
+INT-00838,2026-09-18,727.87,CAD,TXN-100838,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00839,2026-09-21,40.10,CAD,TXN-100839,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00840,2026-09-21,170.98,CAD,TXN-100840,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00841,2026-09-18,88.57,CAD,TXN-100841,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00842,2026-09-27,50.13,CAD,TXN-100842,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00843,2026-09-18,406.45,CAD,TXN-100843,Scarborough Tire,Card payment - Scarborough Tire
+INT-00844,2026-09-23,23.62,CAD,TXN-100844,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00845,2026-09-30,88.57,CAD,TXN-100845,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00846,2026-09-25,87.95,CAD,TXN-100846,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00847,2026-09-27,146.56,CAD,TXN-100847,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00848,2026-09-27,27.01,CAD,TXN-100848,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00849,2026-09-24,232.53,CAD,TXN-100849,Joe's Cafe,Card payment - Joe's Cafe
+INT-00850,2026-09-16,16.27,CAD,TXN-100850,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00851,2026-09-19,65.32,CAD,TXN-100851,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00852,2026-09-30,108.52,CAD,TXN-100852,Scarborough Tire,Card payment - Scarborough Tire
+INT-00853,2026-09-23,71.38,CAD,TXN-100853,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00854,2026-09-11,163.42,CAD,TXN-100854,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00855,2026-09-25,143.19,CAD,TXN-100855,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00856,2026-09-11,51.88,CAD,TXN-100856,Joe's Cafe,Card payment - Joe's Cafe
+INT-00857,2026-09-30,33.19,CAD,TXN-100857,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00858,2026-09-21,20.13,CAD,TXN-100858,Midtown Optometry,Card payment - Midtown Optometry
+INT-00859,2026-09-16,187.51,CAD,TXN-100859,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00860,2026-09-19,23.35,CAD,TXN-100860,Bay Street Books,Card payment - Bay Street Books
+INT-00861,2026-09-21,75.92,CAD,TXN-100861,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00862,2026-09-26,94.66,CAD,TXN-100862,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00863,2026-09-11,39.28,CAD,TXN-100863,Scarborough Tire,Card payment - Scarborough Tire
+INT-00864,2026-09-17,43.35,CAD,TXN-100864,Kensington Grocers,Card payment - Kensington Grocers
+INT-00865,2026-09-10,5.69,CAD,TXN-100865,Scarborough Tire,Card payment - Scarborough Tire
+INT-00866,2026-09-20,72.22,CAD,TXN-100866,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00867,2026-09-07,31.92,CAD,TXN-100867,Midtown Optometry,Card payment - Midtown Optometry
+INT-00868,2026-09-11,42.06,CAD,TXN-100868,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00869,2026-09-01,38.26,CAD,TXN-100869,Midtown Optometry,Card payment - Midtown Optometry
+INT-00870,2026-09-06,53.05,CAD,TXN-100870,Joe's Cafe,Card payment - Joe's Cafe
+INT-00871,2026-09-21,180.45,CAD,TXN-100871,Scarborough Tire,Card payment - Scarborough Tire
+INT-00872,2026-09-09,40.94,CAD,TXN-100872,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00873,2026-09-09,120.68,CAD,TXN-100873,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00874,2026-09-07,59.90,CAD,TXN-100874,Yorkville Dental,Card payment - Yorkville Dental
+INT-00875,2026-09-29,117.13,CAD,TXN-100875,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00876,2026-09-23,40.74,CAD,TXN-100876,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00877,2026-09-28,45.91,CAD,TXN-100877,Junction Records,Card payment - Junction Records
+INT-00878,2026-09-19,40.90,CAD,TXN-100878,High Park Cycles,Card payment - High Park Cycles
+INT-00879,2026-09-29,123.92,CAD,TXN-100879,Midtown Optometry,Card payment - Midtown Optometry
+INT-00880,2026-09-06,133.13,CAD,TXN-100880,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00881,2026-09-21,89.26,CAD,TXN-100881,Scarborough Tire,Card payment - Scarborough Tire
+INT-00882,2026-09-14,368.11,CAD,TXN-100882,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00883,2026-09-10,69.25,CAD,TXN-100883,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00884,2026-09-14,44.38,CAD,TXN-100884,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00885,2026-09-21,52.60,CAD,TXN-100885,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00886,2026-09-02,37.48,CAD,TXN-100886,Junction Records,Card payment - Junction Records
+INT-00887,2026-09-05,138.46,CAD,TXN-100887,Greektown Taverna,Card payment - Greektown Taverna
+INT-00888,2026-09-26,14.58,CAD,TXN-100888,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00889,2026-09-03,169.81,CAD,TXN-100889,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00890,2026-09-05,153.08,CAD,TXN-100890,Scarborough Tire,Card payment - Scarborough Tire
+INT-00891,2026-09-14,345.39,CAD,TXN-100891,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00892,2026-09-30,32.85,CAD,TXN-100892,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00893,2026-09-13,47.75,CAD,TXN-100893,Union Fitness Club,Card payment - Union Fitness Club
+INT-00894,2026-09-04,72.55,CAD,TXN-100894,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00895,2026-09-13,35.14,CAD,TXN-100895,Yorkville Dental,Card payment - Yorkville Dental
+INT-00896,2026-09-11,24.91,CAD,TXN-100896,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00897,2026-09-10,288.36,CAD,TXN-100897,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00898,2026-09-23,61.59,CAD,TXN-100898,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00899,2026-09-17,57.68,CAD,TXN-100899,Danforth Pizza Co.,Card payment - Danforth Pizza Co.
+INT-00900,2026-09-23,25.73,CAD,TXN-100900,Yorkville Dental,Card payment - Yorkville Dental
+INT-00901,2026-09-15,145.01,CAD,TXN-100901,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00902,2026-09-06,239.30,CAD,TXN-100902,Kensington Grocers,Card payment - Kensington Grocers
+INT-00903,2026-09-25,26.40,CAD,TXN-100903,Junction Records,Card payment - Junction Records
+INT-00904,2026-09-09,67.85,CAD,TXN-100904,Union Fitness Club,Card payment - Union Fitness Club
+INT-00905,2026-09-13,56.75,CAD,TXN-100905,Union Fitness Club,Card payment - Union Fitness Club
+INT-00906,2026-09-03,73.60,CAD,TXN-100906,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00907,2026-09-01,27.83,CAD,TXN-100907,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00908,2026-09-12,94.14,CAD,TXN-100908,Queen West Florist,Card payment - Queen West Florist
+INT-00909,2026-09-12,113.13,CAD,TXN-100909,Queen West Florist,Card payment - Queen West Florist
+INT-00910,2026-09-12,78.20,CAD,TXN-100910,Queen West Florist,Card payment - Queen West Florist
+INT-00911,2026-09-30,51.71,CAD,TXN-100911,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00912,2026-09-01,313.03,CAD,TXN-100912,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00913,2026-09-02,74.04,CAD,TXN-100913,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00914,2026-09-18,33.55,CAD,TXN-100914,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00915,2026-09-15,96.24,CAD,TXN-100915,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00916,2026-09-04,128.13,CAD,TXN-100916,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00917,2026-09-21,159.04,CAD,TXN-100917,Greektown Taverna,Card payment - Greektown Taverna
+INT-00918,2026-09-15,71.23,CAD,TXN-100918,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00919,2026-09-14,43.37,CAD,TXN-100919,Greektown Taverna,Card payment - Greektown Taverna
+INT-00920,2026-09-07,1094.20,CAD,TXN-100920,Midtown Optometry,Card payment - Midtown Optometry
+INT-00921,2026-09-14,461.98,CAD,TXN-100921,Midtown Optometry,Card payment - Midtown Optometry
+INT-00922,2026-09-14,28.11,CAD,TXN-100922,Midtown Optometry,Card payment - Midtown Optometry
+INT-00923,2026-09-14,434.48,CAD,TXN-100923,Midtown Optometry,Card payment - Midtown Optometry
+INT-00924,2026-09-23,69.44,CAD,TXN-100924,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00925,2026-09-02,33.12,CAD,TXN-100925,Midtown Optometry,Card payment - Midtown Optometry
+INT-00926,2026-09-10,104.92,CAD,TXN-100926,Queen West Florist,Card payment - Queen West Florist
+INT-00927,2026-09-21,13.32,CAD,TXN-100927,Union Fitness Club,Card payment - Union Fitness Club
+INT-00928,2026-09-16,49.12,CAD,TXN-100928,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00929,2026-09-03,163.49,CAD,TXN-100929,Greektown Taverna,Card payment - Greektown Taverna
+INT-00930,2026-09-10,31.05,CAD,TXN-100930,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00931,2026-09-30,117.73,CAD,TXN-100931,Union Fitness Club,Card payment - Union Fitness Club
+INT-00932,2026-09-30,45.43,CAD,TXN-100932,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00933,2026-09-14,359.95,CAD,TXN-100933,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00934,2026-09-21,247.15,CAD,TXN-100934,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00935,2026-09-22,25.69,CAD,TXN-100935,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00936,2026-09-19,69.08,CAD,TXN-100936,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00937,2026-09-17,99.13,CAD,TXN-100937,Junction Records,Card payment - Junction Records
+INT-00938,2026-09-12,42.47,CAD,TXN-100938,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00939,2026-09-01,74.55,CAD,TXN-100939,Bay Street Books,Card payment - Bay Street Books
+INT-00940,2026-09-07,44.23,CAD,TXN-100940,High Park Cycles,Card payment - High Park Cycles
+INT-00941,2026-09-29,23.30,CAD,TXN-100941,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00942,2026-09-19,60.08,CAD,TXN-100942,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00943,2026-09-26,18.11,CAD,TXN-100943,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00944,2026-09-11,56.08,CAD,TXN-100944,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00945,2026-09-13,23.06,CAD,TXN-100945,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00946,2026-09-29,175.27,CAD,TXN-100946,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00947,2026-09-07,53.18,CAD,TXN-100947,Joe's Cafe,Card payment - Joe's Cafe
+INT-00948,2026-09-24,133.81,CAD,TXN-100948,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00949,2026-09-07,21.15,CAD,TXN-100949,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00950,2026-09-18,26.42,CAD,TXN-100950,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00951,2026-09-25,94.16,CAD,TXN-100951,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00952,2026-09-08,32.63,CAD,TXN-100952,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00953,2026-09-11,103.19,CAD,TXN-100953,Harbourfront Pharmacy,Card payment - Harbourfront Pharmacy
+INT-00954,2026-09-21,58.73,CAD,TXN-100954,Midtown Optometry,Card payment - Midtown Optometry
+INT-00955,2026-09-24,26.11,CAD,TXN-100955,Scarborough Tire,Card payment - Scarborough Tire
+INT-00956,2026-09-18,43.01,CAD,TXN-100956,Union Fitness Club,Card payment - Union Fitness Club
+INT-00957,2026-09-18,14.21,CAD,TXN-100957,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00958,2026-09-18,31.19,CAD,TXN-100958,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00959,2026-09-18,38.16,CAD,TXN-100959,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00960,2026-09-28,90.88,CAD,TXN-100960,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00961,2026-09-11,126.63,CAD,TXN-100961,Lakeshore Auto Repair,Card payment - Lakeshore Auto Repair
+INT-00962,2026-09-10,19.77,CAD,TXN-100962,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00963,2026-09-17,22.12,CAD,TXN-100963,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00964,2026-09-26,174.88,CAD,TXN-100964,Scarborough Tire,Card payment - Scarborough Tire
+INT-00965,2026-09-05,11.82,CAD,TXN-100965,Union Fitness Club,Card payment - Union Fitness Club
+INT-00966,2026-09-14,92.65,CAD,TXN-100966,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00967,2026-09-20,97.28,CAD,TXN-100967,Queen West Florist,Card payment - Queen West Florist
+INT-00968,2026-09-04,18.88,CAD,TXN-100968,Bay Street Books,Card payment - Bay Street Books
+INT-00969,2026-09-04,25.67,CAD,TXN-100969,Scarborough Tire,Card payment - Scarborough Tire
+INT-00970,2026-09-23,89.96,CAD,TXN-100970,Junction Records,Card payment - Junction Records
+INT-00971,2026-09-29,19.49,CAD,TXN-100971,Bay Street Books,Card payment - Bay Street Books
+INT-00972,2026-09-05,38.83,CAD,TXN-100972,Scarborough Tire,Card payment - Scarborough Tire
+INT-00973,2026-09-05,299.00,CAD,TXN-100973,Scarborough Tire,Card payment - Scarborough Tire
+INT-00974,2026-09-06,33.62,CAD,TXN-100974,Liberty Village Tech,Card payment - Liberty Village Tech
+INT-00975,2026-09-12,71.85,CAD,TXN-100975,Etobicoke Plumbing Ltd,Card payment - Etobicoke Plumbing Ltd
+INT-00976,2026-09-05,134.36,CAD,TXN-100976,Yorkville Dental,Card payment - Yorkville Dental
+INT-00977,2026-09-05,81.77,CAD,TXN-100977,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00978,2026-09-09,45.72,CAD,TXN-100978,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00979,2026-09-19,106.37,CAD,TXN-100979,Parkdale Laundromat,Card payment - Parkdale Laundromat
+INT-00980,2026-09-14,17.57,CAD,TXN-100980,Annex Coffee Roasters,Card payment - Annex Coffee Roasters
+INT-00981,2026-09-25,45.26,CAD,TXN-100981,Kensington Grocers,Card payment - Kensington Grocers
+INT-00982,2026-09-24,135.62,CAD,TXN-100982,Yorkville Dental,Card payment - Yorkville Dental
+INT-00983,2026-09-04,51.39,CAD,TXN-100983,Maple Leaf Hardware,Card payment - Maple Leaf Hardware
+INT-00984,2026-09-17,36.27,CAD,TXN-100984,Rosedale Interiors,Card payment - Rosedale Interiors
+INT-00985,2026-09-21,102.17,CAD,TXN-100985,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00986,2026-09-17,36.42,CAD,TXN-100986,Yorkville Dental,Card payment - Yorkville Dental
+INT-00987,2026-09-11,83.53,CAD,TXN-100987,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00988,2026-09-24,78.64,CAD,TXN-100988,Yorkville Dental,Card payment - Yorkville Dental
+INT-00989,2026-09-05,65.97,CAD,TXN-100989,High Park Cycles,Card payment - High Park Cycles
+INT-00990,2026-09-23,111.05,CAD,TXN-100990,Junction Records,Card payment - Junction Records
+INT-00991,2026-09-06,52.62,CAD,TXN-100991,Northern Lights Bakery,Card payment - Northern Lights Bakery
+INT-00992,2026-09-12,30.58,CAD,TXN-100992,Bay Street Books,Card payment - Bay Street Books
+INT-00993,2026-09-01,93.13,CAD,TXN-100993,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00994,2026-09-30,61.11,CAD,TXN-100994,Distillery Wine Bar,Card payment - Distillery Wine Bar
+INT-00995,2026-09-01,139.80,CAD,TXN-100995,Riverdale Pet Supply,Card payment - Riverdale Pet Supply
+INT-00996,2026-09-17,189.45,CAD,TXN-100996,Leslieville Bistro,Card payment - Leslieville Bistro
+INT-00997,2026-09-12,9.57,CAD,TXN-100997,Yorkville Dental,Card payment - Yorkville Dental
+INT-00998,2026-09-12,56.87,CAD,TXN-100998,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-00999,2026-09-14,50.95,CAD,TXN-100999,Cabbagetown Deli,Card payment - Cabbagetown Deli
+INT-01000,2026-09-18,337.10,CAD,TXN-101000,High Park Cycles,Card payment - High Park Cycles
+INT-01001,2026-13-01,20.00,CAD,TXN-999999,Junction Records,Card payment - Junction Records
