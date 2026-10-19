@@ -23,6 +23,14 @@ from .report import console_summary, write_csv, write_excel
 ROOT = Path(__file__).resolve().parent.parent
 
 
+def _display_path(path: Path) -> str:
+    """Show paths relative to the current folder when possible, so output doesn't expose machine paths."""
+    try:
+        return str(Path(path).resolve().relative_to(Path.cwd()))
+    except ValueError:
+        return str(path)
+
+
 def reconcile(internal_path, processor_path, config_path) -> ReconResult:
     cfg = ReconConfig.load(config_path)
     internal, rej_i = load_records(internal_path, "internal", cfg.internal)
@@ -65,7 +73,7 @@ def main(argv: list[str] | None = None) -> int:
     csv_path = write_csv(result, out / "recon_results.csv")
     print(console_summary(result))
     print(f"\n  Reconciled in {elapsed:.2f}s")
-    print(f"  Report : {xlsx}\n  Detail : {csv_path}")
+    print(f"  Report : {_display_path(xlsx)}\n  Detail : {_display_path(csv_path)}")
 
     if args.cmd == "evaluate":
         print()

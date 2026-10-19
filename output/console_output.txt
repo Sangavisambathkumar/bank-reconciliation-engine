@@ -30,9 +30,9 @@ Reconciliation as of 2026-09-30
     Duplicate lines                                        -537.54
     Unexplained (must be 0)                                   0.00
 
-  Reconciled in 0.08s
-  Report : /home/claude/recon-engine/output/recon_report.xlsx
-  Detail : /home/claude/recon-engine/output/recon_results.csv
+  Reconciled in 0.12s
+  Report : output/recon_report.xlsx
+  Detail : output/recon_results.csv
 
 Accuracy against ground truth
   Link precision : 100.00%   (pairings we made that are correct)
