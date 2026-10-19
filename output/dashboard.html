@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reconciliation Dashboard</title>
+<meta name="description" content="Bank ledger vs payment processor reconciliation results">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,0.10); --wash: rgba(11,11,11,0.04);
+  --series-1: #2a78d6; --series-2: #eb6834; --total: #52514e;
+  --good: #0ca30c; --good-text: #006300; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+  --accent: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10); --wash: rgba(255,255,255,0.05);
+    --series-1: #3987e5; --series-2: #d95926; --total: #c3c2b7; --good-text: #0ca30c; --accent: #3987e5;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10); --wash: rgba(255,255,255,0.05);
+  --series-1: #3987e5; --series-2: #d95926; --total: #c3c2b7; --good-text: #0ca30c; --accent: #3987e5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 28px 16px 48px; }
+header { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+h1 { font-size: 24px; line-height: 1.2; margin: 0 0 4px; letter-spacing: -0.01em; }
+.sub { color: var(--ink-2); margin: 0; }
+.head-right { display: flex; align-items: center; gap: 10px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px;
+  font-weight: 600; font-size: 13px; border: 1px solid var(--ring); background: var(--surface); white-space: nowrap; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+button.theme { font: inherit; font-size: 13px; color: var(--ink-2); background: var(--surface);
+  border: 1px solid var(--ring); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 18px 18px 16px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 12px; }
+.kpi .label { color: var(--ink-2); font-size: 13px; }
+.kpi .value { font-size: 26px; font-weight: 650; letter-spacing: -0.01em; margin: 2px 0; }
+.kpi .note { color: var(--muted); font-size: 12px; }
+.kpi .value.good { color: var(--good-text); }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; }
+@media (max-width: 820px) { .grid2 { grid-template-columns: 1fr; } }
+h2 { font-size: 15px; margin: 0 0 2px; }
+.card .desc { color: var(--ink-2); margin: 0 0 12px; font-size: 13px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--ink-2); margin: 0 0 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.chart { width: 100%; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: inherit; }
+details.tbl { margin-top: 10px; font-size: 13px; }
+details.tbl summary { color: var(--ink-2); cursor: pointer; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--ink-2); font-weight: 600; white-space: nowrap; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mini td, .mini th { padding: 4px 6px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: inherit; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px;
+  border-radius: 999px; border: 1px solid var(--ring); background: transparent; color: var(--ink); cursor: pointer; }
+.chip:hover { background: var(--wash); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.chip .n { color: inherit; opacity: .7; font-variant-numeric: tabular-nums; }
+input[type=search] { font: inherit; font-size: 13px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--ring);
+  background: var(--page); color: var(--ink); min-width: 220px; flex: 1 1 220px; max-width: 340px; margin-left: auto; }
+.scroll { overflow-x: auto; margin: 0 -4px; padding: 0 4px; }
+#ex th[data-sort] { cursor: pointer; user-select: none; }
+#ex th[data-sort]:hover { color: var(--ink); }
+#ex th .arr { color: var(--muted); font-size: 11px; margin-left: 3px; }
+#ex td.note { color: var(--ink-2); min-width: 260px; }
+#ex td.ids { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; white-space: nowrap; }
+.tag { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-weight: 550; }
+.icon { width: 16px; height: 16px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 10px;
+  font-weight: 800; color: #0b0b0b; flex: none; line-height: 1; }
+.more { margin-top: 10px; }
+.more button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--ring);
+  background: transparent; color: var(--ink); cursor: pointer; }
+.empty { color: var(--muted); padding: 18px 8px; text-align: center; }
+#tip { position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--ink);
+  border: 1px solid var(--ring); border-radius: 8px; padding: 8px 10px; font-size: 12px; line-height: 1.5;
+  box-shadow: 0 4px 16px rgba(0,0,0,.12); opacity: 0; transition: opacity .08s; max-width: 280px; }
+#tip b { font-weight: 650; }
+#tip .k { color: var(--ink-2); }
+footer { color: var(--muted); font-size: 12px; margin-top: 18px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+footer code { font-size: 12px; }
+.acc { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-bottom: 12px; }
+.acc .v { font-size: 22px; font-weight: 650; }
+.acc .l { color: var(--ink-2); font-size: 12px; }
+@media (max-width: 520px) { .kpi .value { font-size: 22px; } input[type=search] { margin-left: 0; max-width: none; } }
+@media print { button.theme, .toolbar, .more { display: none; } .card { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Reconciliation dashboard</h1>
+      <p class="sub" id="subtitle"></p>
+    </div>
+    <div class="head-right">
+      <span class="pill" id="tie"></span>
+      <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
+    </div>
+  </header>
+
+  <section class="kpis" id="kpis" aria-label="Headline figures"></section>
+
+  <div class="grid2">
+    <section class="card">
+      <h2>Where every item landed</h2>
+      <p class="desc">Each settlement or booking is placed in exactly one outcome.</p>
+      <div class="legend" id="lg-status"></div>
+      <div class="chart" id="ch-status" role="img" aria-label="Bar chart of items by outcome"></div>
+      <details class="tbl"><summary>View as table</summary><div class="scroll" id="tb-status"></div></details>
+    </section>
+    <section class="card">
+      <h2>Why the two files differ</h2>
+      <p class="desc" id="bridge-desc"></p>
+      <div class="legend" id="lg-bridge"></div>
+      <div class="chart" id="ch-bridge" role="img" aria-label="Bridge chart explaining the gap between the files"></div>
+      <details class="tbl"><summary>View as table</summary><div class="scroll" id="tb-bridge"></div></details>
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section class="card">
+      <h2>Unsettled bookings by age</h2>
+      <p class="desc" id="aging-desc"></p>
+      <div class="legend" id="lg-aging"></div>
+      <div class="chart" id="ch-aging" role="img" aria-label="Bar chart of unsettled bookings by age"></div>
+      <details class="tbl"><summary>View as table</summary><div class="scroll" id="tb-aging"></div></details>
+    </section>
+    <section class="card" id="acc-card">
+      <h2>Engine accuracy</h2>
+      <p class="desc">Scored against the answer key written by the test-data generator.</p>
+      <div class="acc" id="acc"></div>
+      <div class="scroll" id="tb-acc"></div>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="ex-h">
+    <h2 id="ex-h">Exceptions to work</h2>
+    <p class="desc">Everything that needs a person, with the engine's reason. Click a column to sort.</p>
+    <div class="toolbar">
+      <div class="chips" id="chips" role="group" aria-label="Filter by queue"></div>
+      <input type="search" id="q" placeholder="Search merchant, ID, reference, note" aria-label="Search exceptions">
+    </div>
+    <div class="scroll"><table id="ex"></table></div>
+    <div class="more" id="more"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+<div id="tip" role="tooltip"></div>
+
+<script id="recon-data" type="application/json">{"as_of":"2026-09-30","generated":"2026-10-19 16:29","inputs":{"internal":"internal_ledger.csv","processor":"processor_settlement.csv"},"totals":{"internal_records":1000,"processor_records":936,"internal_cents":10077032,"processor_cents":9617087,"gap_cents":459945,"unexplained_cents":0,"internal_match_rate":0.93,"processor_match_rate":0.9722222222222222,"rejected":4},"statuses":[{"key":"MATCHED_EXACT","label":"Exact match","matched":true,"items":721,"internal_records":721,"processor_records":721,"internal_cents":7164950,"processor_cents":7164950},{"key":"MATCHED_TOLERANCE","label":"Matched, fee deducted","matched":true,"items":73,"internal_records":73,"processor_records":73,"internal_cents":982952,"processor_cents":974612},{"key":"MATCHED_FUZZY","label":"Matched without reference","matched":true,"items":44,"internal_records":44,"processor_records":44,"internal_cents":294484,"processor_cents":294484},{"key":"MATCHED_MANY_TO_ONE","label":"Batched settlement","matched":true,"items":28,"internal_records":70,"processor_records":28,"internal_cents":607946,"processor_cents":607946},{"key":"MATCHED_ONE_TO_MANY","label":"Split settlement","matched":true,"items":22,"internal_records":22,"processor_records":44,"internal_cents":327260,"processor_cents":327260},{"key":"BREAK","label":"Break (amount or date)","matched":false,"items":11,"internal_records":11,"processor_records":11,"internal_cents":158786,"processor_cents":106621},{"key":"UNMATCHED_INTERNAL","label":"Booked, not settled","matched":false,"items":59,"internal_records":59,"processor_records":0,"internal_cents":540654,"processor_cents":0},{"key":"UNMATCHED_PROCESSOR","label":"Settled, not booked","matched":false,"items":12,"internal_records":0,"processor_records":12,"internal_cents":0,"processor_cents":87460},{"key":"DUPLICATE","label":"Duplicate line","matched":false,"items":3,"internal_records":0,"processor_records":3,"internal_cents":0,"processor_cents":53754}],"bridge":[{"label":"Processor fees","cents":8340},{"label":"Breaks to investigate","cents":52165},{"label":"Booked, not yet settled","cents":540654},{"label":"Settled, not booked","cents":-87460},{"label":"Duplicate lines","cents":-53754}],"aging":[{"label":"0\u20131 days","lo":0,"hi":1,"count":38,"cents":364897},{"label":"2\u20137 days","lo":2,"hi":7,"count":6,"cents":50314},{"label":"8\u201314 days","lo":8,"hi":14,"count":5,"cents":52663},{"label":"15\u201330 days","lo":15,"hi":30,"count":10,"cents":72780},{"label":"Over 30 days","lo":31,"hi":1000000,"count":0,"cents":0}],"timing_lag_days":2,"exceptions":[{"id":"M00001","cat":"duplicate","status":"Duplicate line","date":"2026-09-07","age":23,"internal":[],"processor":["PRC-000106"],"ref":"TXN100120","counterparty":"LIBERTY VILLAGE TECH","internal_cents":null,"processor_cents":28097,"diff_cents":-28097,"note":"Same reference, amount and date as PRC-000107 (row 585); possible double posting"},{"id":"M00002","cat":"duplicate","status":"Duplicate line","date":"2026-09-19","age":11,"internal":[],"processor":["PRC-000786"],"ref":"TXN-100841","counterparty":"DISTILLERY WINE BAR TORONTO ON","internal_cents":null,"processor_cents":8857,"diff_cents":-8857,"note":"Same reference, amount and date as PRC-000785 (row 204); possible double posting"},{"id":"M00003","cat":"duplicate","status":"Duplicate line","date":"2026-09-24","age":6,"internal":[],"processor":["PRC-000692"],"ref":"100739","counterparty":"Cabbagetown Deli","internal_cents":null,"processor_cents":16800,"diff_cents":-16800,"note":"Same reference, amount and date as PRC-000693 (row 223); possible double posting"},{"id":"M00892","cat":"break","status":"Break (amount or date)","date":"2026-09-02","age":28,"internal":["INT-00327"],"processor":["PRC-000306"],"ref":"TXN-100327","counterparty":"Lakeshore Auto Repair","internal_cents":9561,"processor_cents":7125,"diff_cents":2436,"note":"Same reference but amount differs by $24.36 (25.5%)"},{"id":"M00893","cat":"break","status":"Break (amount or date)","date":"2026-09-09","age":21,"internal":["INT-00088"],"processor":["PRC-000076"],"ref":"TXN-100088","counterparty":"Leslieville Bistro","internal_cents":7442,"processor_cents":5293,"diff_cents":2149,"note":"Same reference but amount differs by $21.49 (28.9%)"},{"id":"M00894","cat":"break","status":"Break (amount or date)","date":"2026-09-09","age":21,"internal":["INT-00527"],"processor":["PRC-000492"],"ref":"TXN-100527","counterparty":"Junction Records","internal_cents":9399,"processor_cents":7252,"diff_cents":2147,"note":"Same reference but amount differs by $21.47 (22.8%)"},{"id":"M00895","cat":"break","status":"Break (amount or date)","date":"2026-09-11","age":19,"internal":["INT-00045"],"processor":["PRC-000040"],"ref":"TXN-100045","counterparty":"Liberty Village Tech","internal_cents":9328,"processor_cents":5495,"diff_cents":3833,"note":"Same reference but amount differs by $38.33 (41.1%)"},{"id":"M00896","cat":"break","status":"Break (amount or date)","date":"2026-09-11","age":19,"internal":["INT-00836"],"processor":["PRC-000781"],"ref":"TXN-100836","counterparty":"Queen West Florist","internal_cents":5193,"processor_cents":3279,"diff_cents":1914,"note":"Same reference but amount differs by $19.14 (36.9%)"},{"id":"M00897","cat":"break","status":"Break (amount or date)","date":"2026-09-15","age":15,"internal":["INT-00915"],"processor":["PRC-000848"],"ref":"TXN-100915","counterparty":"Harbourfront Pharmacy","internal_cents":9624,"processor_cents":5827,"diff_cents":3797,"note":"Same reference but amount differs by $37.97 (39.5%)"},{"id":"M00898","cat":"break","status":"Break (amount or date)","date":"2026-09-22","age":8,"internal":["INT-00636"],"processor":["PRC-000594"],"ref":"TXN-100636","counterparty":"Greektown Taverna","internal_cents":27668,"processor_cents":16287,"diff_cents":11381,"note":"Same reference but amount differs by $113.81 (41.1%)"},{"id":"M00899","cat":"break","status":"Break (amount or date)","date":"2026-09-24","age":6,"internal":["INT-00140"],"processor":["PRC-000125"],"ref":"TXN-100140","counterparty":"Danforth Pizza Co.","internal_cents":17919,"processor_cents":9946,"diff_cents":7973,"note":"Same reference but amount differs by $79.73 (44.5%)"},{"id":"M00900","cat":"break","status":"Break (amount or date)","date":"2026-09-26","age":4,"internal":["INT-00178"],"processor":["PRC-000164"],"ref":"TXN-100178","counterparty":"Riverdale Pet Supply","internal_cents":5669,"processor_cents":3507,"diff_cents":2162,"note":"Same reference but amount differs by $21.62 (38.1%)"},{"id":"M00901","cat":"break","status":"Break (amount or date)","date":"2026-09-26","age":4,"internal":["INT-00804"],"processor":["PRC-000751"],"ref":"TXN-100804","counterparty":"Riverdale Pet Supply","internal_cents":40709,"processor_cents":30419,"diff_cents":10290,"note":"Same reference but amount differs by $102.90 (25.3%)"},{"id":"M00902","cat":"break","status":"Break (amount or date)","date":"2026-09-28","age":2,"internal":["INT-00187"],"processor":["PRC-000173"],"ref":"TXN-100187","counterparty":"Danforth Pizza Co.","internal_cents":16274,"processor_cents":12191,"diff_cents":4083,"note":"Same reference but amount differs by $40.83 (25.1%)"},{"id":"M00903","cat":"chase","status":"Booked, not settled","date":"2026-09-01","age":29,"internal":["INT-00993"],"processor":[],"ref":"TXN-100993","counterparty":"Cabbagetown Deli","internal_cents":9313,"processor_cents":null,"diff_cents":9313,"note":"Not settled after 29 days; chase processor"},{"id":"M00904","cat":"chase","status":"Booked, not settled","date":"2026-09-02","age":28,"internal":["INT-00442"],"processor":[],"ref":"TXN-100442","counterparty":"Northern Lights Bakery","internal_cents":4416,"processor_cents":null,"diff_cents":4416,"note":"Not settled after 28 days; chase processor"},{"id":"M00905","cat":"chase","status":"Booked, not settled","date":"2026-09-03","age":27,"internal":["INT-00709"],"processor":[],"ref":"TXN-100709","counterparty":"Yorkville Dental","internal_cents":19136,"processor_cents":null,"diff_cents":19136,"note":"Not settled after 27 days; chase processor"},{"id":"M00906","cat":"chase","status":"Booked, not settled","date":"2026-09-04","age":26,"internal":["INT-00438"],"processor":[],"ref":"TXN-100438","counterparty":"Annex Coffee Roasters","internal_cents":1708,"processor_cents":null,"diff_cents":1708,"note":"Not settled after 26 days; chase processor"},{"id":"M00907","cat":"chase","status":"Booked, not settled","date":"2026-09-05","age":25,"internal":["INT-00168"],"processor":[],"ref":"TXN-100168","counterparty":"Greektown Taverna","internal_cents":11857,"processor_cents":null,"diff_cents":11857,"note":"Not settled after 25 days; chase processor"},{"id":"M00908","cat":"chase","status":"Booked, not settled","date":"2026-09-10","age":20,"internal":["INT-00109"],"processor":[],"ref":"TXN-100109","counterparty":"Rosedale Interiors","internal_cents":9338,"processor_cents":null,"diff_cents":9338,"note":"Not settled after 20 days; chase processor"},{"id":"M00909","cat":"chase","status":"Booked, not settled","date":"2026-09-10","age":20,"internal":["INT-00754"],"processor":[],"ref":"TXN-100754","counterparty":"Northern Lights Bakery","internal_cents":720,"processor_cents":null,"diff_cents":720,"note":"Not settled after 20 days; chase processor"},{"id":"M00910","cat":"chase","status":"Booked, not settled","date":"2026-09-11","age":19,"internal":["INT-00953"],"processor":[],"ref":"TXN-100953","counterparty":"Harbourfront Pharmacy","internal_cents":10319,"processor_cents":null,"diff_cents":10319,"note":"Not settled after 19 days; chase processor"},{"id":"M00911","cat":"chase","status":"Booked, not settled","date":"2026-09-12","age":18,"internal":["INT-00703"],"processor":[],"ref":"TXN-100703","counterparty":"Lakeshore Auto Repair","internal_cents":4557,"processor_cents":null,"diff_cents":4557,"note":"Not settled after 18 days; chase processor"},{"id":"M00912","cat":"chase","status":"Booked, not settled","date":"2026-09-15","age":15,"internal":["INT-00287"],"processor":[],"ref":"TXN-100287","counterparty":"Etobicoke Plumbing Ltd","internal_cents":1416,"processor_cents":null,"diff_cents":1416,"note":"Not settled after 15 days; chase processor"},{"id":"M00913","cat":"chase","status":"Booked, not settled","date":"2026-09-18","age":12,"internal":["INT-00753"],"processor":[],"ref":"TXN-100753","counterparty":"Harbourfront Pharmacy","internal_cents":16451,"processor_cents":null,"diff_cents":16451,"note":"Not settled after 12 days; chase processor"},{"id":"M00914","cat":"chase","status":"Booked, not settled","date":"2026-09-19","age":11,"internal":["INT-00262"],"processor":[],"ref":"TXN-100262","counterparty":"Parkdale Laundromat","internal_cents":11471,"processor_cents":null,"diff_cents":11471,"note":"Not settled after 11 days; chase processor"},{"id":"M00915","cat":"chase","status":"Booked, not settled","date":"2026-09-21","age":9,"internal":["INT-00086"],"processor":[],"ref":"TXN-100086","counterparty":"Scarborough Tire","internal_cents":5173,"processor_cents":null,"diff_cents":5173,"note":"Not settled after 9 days; chase processor"},{"id":"M00916","cat":"chase","status":"Booked, not settled","date":"2026-09-21","age":9,"internal":["INT-00094"],"processor":[],"ref":"TXN-100094","counterparty":"Distillery Wine Bar","internal_cents":11038,"processor_cents":null,"diff_cents":11038,"note":"Not settled after 9 days; chase processor"},{"id":"M00917","cat":"chase","status":"Booked, not settled","date":"2026-09-21","age":9,"internal":["INT-00220"],"processor":[],"ref":"TXN-100220","counterparty":"Maple Leaf Hardware","internal_cents":8530,"processor_cents":null,"diff_cents":8530,"note":"Not settled after 9 days; chase processor"},{"id":"M00918","cat":"chase","status":"Booked, not settled","date":"2026-09-23","age":7,"internal":["INT-00876"],"processor":[],"ref":"TXN-100876","counterparty":"Riverdale Pet Supply","internal_cents":4074,"processor_cents":null,"diff_cents":4074,"note":"Not settled after 7 days; chase processor"},{"id":"M00919","cat":"chase","status":"Booked, not settled","date":"2026-09-24","age":6,"internal":["INT-00430"],"processor":[],"ref":"TXN-100430","counterparty":"Kensington Grocers","internal_cents":18113,"processor_cents":null,"diff_cents":18113,"note":"Not settled after 6 days; chase processor"},{"id":"M00920","cat":"chase","status":"Booked, not settled","date":"2026-09-25","age":5,"internal":["INT-00855"],"processor":[],"ref":"TXN-100855","counterparty":"Maple Leaf Hardware","internal_cents":14319,"processor_cents":null,"diff_cents":14319,"note":"Not settled after 5 days; chase processor"},{"id":"M00921","cat":"chase","status":"Booked, not settled","date":"2026-09-26","age":4,"internal":["INT-00689"],"processor":[],"ref":"TXN-100689","counterparty":"Scarborough Tire","internal_cents":5037,"processor_cents":null,"diff_cents":5037,"note":"Not settled after 4 days; chase processor"},{"id":"M00922","cat":"chase","status":"Booked, not settled","date":"2026-09-26","age":4,"internal":["INT-00708"],"processor":[],"ref":"TXN-100708","counterparty":"Bay Street Books","internal_cents":6817,"processor_cents":null,"diff_cents":6817,"note":"Not settled after 4 days; chase processor"},{"id":"M00923","cat":"chase","status":"Booked, not settled","date":"2026-09-27","age":3,"internal":["INT-00343"],"processor":[],"ref":"TXN-100343","counterparty":"Queen West Florist","internal_cents":1954,"processor_cents":null,"diff_cents":1954,"note":"Not settled after 3 days; chase processor"},{"id":"M00924","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00054"],"processor":[],"ref":"TXN-100054","counterparty":"Leslieville Bistro","internal_cents":1979,"processor_cents":null,"diff_cents":1979,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00925","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00061"],"processor":[],"ref":"TXN-100061","counterparty":"Harbourfront Pharmacy","internal_cents":6504,"processor_cents":null,"diff_cents":6504,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00926","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00338"],"processor":[],"ref":"TXN-100338","counterparty":"Junction Records","internal_cents":6436,"processor_cents":null,"diff_cents":6436,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00927","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00368"],"processor":[],"ref":"TXN-100368","counterparty":"Riverdale Pet Supply","internal_cents":4370,"processor_cents":null,"diff_cents":4370,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00928","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00404"],"processor":[],"ref":"TXN-100404","counterparty":"Maple Leaf Hardware","internal_cents":9355,"processor_cents":null,"diff_cents":9355,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00929","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00538"],"processor":[],"ref":"TXN-100538","counterparty":"Yorkville Dental","internal_cents":3506,"processor_cents":null,"diff_cents":3506,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00930","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00593"],"processor":[],"ref":"TXN-100593","counterparty":"Leslieville Bistro","internal_cents":2968,"processor_cents":null,"diff_cents":2968,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00931","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00746"],"processor":[],"ref":"TXN-100746","counterparty":"Northern Lights Bakery","internal_cents":4428,"processor_cents":null,"diff_cents":4428,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00932","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00747"],"processor":[],"ref":"TXN-100747","counterparty":"Riverdale Pet Supply","internal_cents":67814,"processor_cents":null,"diff_cents":67814,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00933","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00752"],"processor":[],"ref":"TXN-100752","counterparty":"Etobicoke Plumbing Ltd","internal_cents":3587,"processor_cents":null,"diff_cents":3587,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00934","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00813"],"processor":[],"ref":"TXN-100813","counterparty":"Leslieville Bistro","internal_cents":8143,"processor_cents":null,"diff_cents":8143,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00935","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00875"],"processor":[],"ref":"TXN-100875","counterparty":"Lakeshore Auto Repair","internal_cents":11713,"processor_cents":null,"diff_cents":11713,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00936","cat":"timing","status":"Booked, not settled","date":"2026-09-29","age":1,"internal":["INT-00879"],"processor":[],"ref":"TXN-100879","counterparty":"Midtown Optometry","internal_cents":12392,"processor_cents":null,"diff_cents":12392,"note":"TIMING: booked 1 day(s) before cutoff; settlement expected next cycle"},{"id":"M00937","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00016"],"processor":[],"ref":"TXN-100016","counterparty":"Leslieville Bistro","internal_cents":33398,"processor_cents":null,"diff_cents":33398,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00938","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00023"],"processor":[],"ref":"TXN-100023","counterparty":"Scarborough Tire","internal_cents":7790,"processor_cents":null,"diff_cents":7790,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00939","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00039"],"processor":[],"ref":"TXN-100039","counterparty":"Maple Leaf Hardware","internal_cents":14543,"processor_cents":null,"diff_cents":14543,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00940","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00046"],"processor":[],"ref":"TXN-100046","counterparty":"Junction Records","internal_cents":10519,"processor_cents":null,"diff_cents":10519,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00941","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00063"],"processor":[],"ref":"TXN-100063","counterparty":"Annex Coffee Roasters","internal_cents":10159,"processor_cents":null,"diff_cents":10159,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00942","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00236"],"processor":[],"ref":"TXN-100236","counterparty":"Annex Coffee Roasters","internal_cents":3640,"processor_cents":null,"diff_cents":3640,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00943","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00277"],"processor":[],"ref":"TXN-100277","counterparty":"Northern Lights Bakery","internal_cents":2989,"processor_cents":null,"diff_cents":2989,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00944","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00407"],"processor":[],"ref":"TXN-100407","counterparty":"Scarborough Tire","internal_cents":6267,"processor_cents":null,"diff_cents":6267,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00945","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00424"],"processor":[],"ref":"TXN-100424","counterparty":"Parkdale Laundromat","internal_cents":940,"processor_cents":null,"diff_cents":940,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00946","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00445"],"processor":[],"ref":"TXN-100445","counterparty":"Distillery Wine Bar","internal_cents":2382,"processor_cents":null,"diff_cents":2382,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00947","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00473"],"processor":[],"ref":"TXN-100473","counterparty":"Northern Lights Bakery","internal_cents":5604,"processor_cents":null,"diff_cents":5604,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00948","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00592"],"processor":[],"ref":"TXN-100592","counterparty":"Northern Lights Bakery","internal_cents":6100,"processor_cents":null,"diff_cents":6100,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00949","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00613"],"processor":[],"ref":"TXN-100613","counterparty":"Riverdale Pet Supply","internal_cents":9478,"processor_cents":null,"diff_cents":9478,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00950","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00616"],"processor":[],"ref":"TXN-100616","counterparty":"Riverdale Pet Supply","internal_cents":12404,"processor_cents":null,"diff_cents":12404,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00951","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00674"],"processor":[],"ref":"TXN-100674","counterparty":"Parkdale Laundromat","internal_cents":5344,"processor_cents":null,"diff_cents":5344,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00952","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00780"],"processor":[],"ref":"TXN-100780","counterparty":"Yorkville Dental","internal_cents":32124,"processor_cents":null,"diff_cents":32124,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00953","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00788"],"processor":[],"ref":"TXN-100788","counterparty":"Queen West Florist","internal_cents":4110,"processor_cents":null,"diff_cents":4110,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00954","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00845"],"processor":[],"ref":"TXN-100845","counterparty":"Rosedale Interiors","internal_cents":8857,"processor_cents":null,"diff_cents":8857,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00955","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00852"],"processor":[],"ref":"TXN-100852","counterparty":"Scarborough Tire","internal_cents":10852,"processor_cents":null,"diff_cents":10852,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00956","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00857"],"processor":[],"ref":"TXN-100857","counterparty":"Harbourfront Pharmacy","internal_cents":3319,"processor_cents":null,"diff_cents":3319,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00957","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00892"],"processor":[],"ref":"TXN-100892","counterparty":"Lakeshore Auto Repair","internal_cents":3285,"processor_cents":null,"diff_cents":3285,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00958","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00911"],"processor":[],"ref":"TXN-100911","counterparty":"Harbourfront Pharmacy","internal_cents":5171,"processor_cents":null,"diff_cents":5171,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00959","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00931"],"processor":[],"ref":"TXN-100931","counterparty":"Union Fitness Club","internal_cents":11773,"processor_cents":null,"diff_cents":11773,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00960","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00932"],"processor":[],"ref":"TXN-100932","counterparty":"Liberty Village Tech","internal_cents":4543,"processor_cents":null,"diff_cents":4543,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00961","cat":"timing","status":"Booked, not settled","date":"2026-09-30","age":0,"internal":["INT-00994"],"processor":[],"ref":"TXN-100994","counterparty":"Distillery Wine Bar","internal_cents":6111,"processor_cents":null,"diff_cents":6111,"note":"TIMING: booked 0 day(s) before cutoff; settlement expected next cycle"},{"id":"M00962","cat":"not_booked","status":"Settled, not booked","date":"2026-09-01","age":29,"internal":[],"processor":["PRC-000926"],"ref":"ETR41743155","counterparty":"INTERAC E-TRANSFER DEPOSIT TORONTO ON","internal_cents":null,"processor_cents":8820,"diff_cents":-8820,"note":"Credit from processor with no booking; unidentified deposit"},{"id":"M00963","cat":"not_booked","status":"Settled, not booked","date":"2026-09-04","age":26,"internal":[],"processor":["PRC-000925"],"ref":"CB-0001","counterparty":"SQ *JOES CAFE","internal_cents":null,"processor_cents":-9765,"diff_cents":9765,"note":"Debit from processor with no booking; possible chargeback or reversal"},{"id":"M00964","cat":"not_booked","status":"Settled, not booked","date":"2026-09-05","age":25,"internal":[],"processor":["PRC-000929"],"ref":"CB-0005","counterparty":"SQ *CABBAGETOWN DELI","internal_cents":null,"processor_cents":-35004,"diff_cents":35004,"note":"Debit from processor with no booking; possible chargeback or reversal"},{"id":"M00965","cat":"not_booked","status":"Settled, not booked","date":"2026-09-10","age":20,"internal":[],"processor":["PRC-000928"],"ref":"ETR75220319","counterparty":"Interac e-Transfer Deposit Inc.","internal_cents":null,"processor_cents":12828,"diff_cents":-12828,"note":"Credit from processor with no booking; unidentified deposit"},{"id":"M00966","cat":"not_booked","status":"Settled, not booked","date":"2026-09-13","age":17,"internal":[],"processor":["PRC-000936"],"ref":"ETR64666503","counterparty":"INTERAC E-TRANSFER DEPOSIT TORONTO ON","internal_cents":null,"processor_cents":70809,"diff_cents":-70809,"note":"Credit from processor with no booking; unidentified deposit"},{"id":"M00967","cat":"not_booked","status":"Settled, not booked","date":"2026-09-13","age":17,"internal":[],"processor":["PRC-000934"],"ref":"ETR15149455","counterparty":"SQ *INTERAC E-TRANSFER DEPOSIT","internal_cents":null,"processor_cents":37895,"diff_cents":-37895,"note":"Credit from processor with no booking; unidentified deposit"},{"id":"M00968","cat":"not_booked","status":"Settled, not booked","date":"2026-09-14","age":16,"internal":[],"processor":["PRC-000931"],"ref":"CB-0007","counterparty":"UNION FITNESS CLUB","internal_cents":null,"processor_cents":-32557,"diff_cents":32557,"note":"Debit from processor with no booking; possible chargeback or reversal"},{"id":"M00969","cat":"not_booked","status":"Settled, not booked","date":"2026-09-14","age":16,"internal":[],"processor":["PRC-000935"],"ref":"CB-0011","counterparty":"JOES CAFE","internal_cents":null,"processor_cents":-14583,"diff_cents":14583,"note":"Debit from processor with no booking; possible chargeback or reversal"},{"id":"M00970","cat":"not_booked","status":"Settled, not booked","date":"2026-09-17","age":13,"internal":[],"processor":["PRC-000932"],"ref":"ETR92020513","counterparty":"SQ *INTERAC E-TRANSFER DEPOSIT","internal_cents":null,"processor_cents":25748,"diff_cents":-25748,"note":"Credit from processor with no booking; unidentified deposit"},{"id":"M00971","cat":"not_booked","status":"Settled, not booked","date":"2026-09-19","age":11,"internal":[],"processor":["PRC-000933"],"ref":"CB-0009","counterparty":"SQ *MIDTOWN OPTOMETRY","internal_cents":null,"processor_cents":-11246,"diff_cents":11246,"note":"Debit from processor with no booking; possible chargeback or reversal"},{"id":"M00972","cat":"not_booked","status":"Settled, not booked","date":"2026-09-20","age":10,"internal":[],"processor":["PRC-000927"],"ref":"CB-0003","counterparty":"Cabbagetown Deli Inc.","internal_cents":null,"processor_cents":-2026,"diff_cents":2026,"note":"Debit from processor with no booking; possible chargeback or reversal"},{"id":"M00973","cat":"not_booked","status":"Settled, not booked","date":"2026-09-25","age":5,"internal":[],"processor":["PRC-000930"],"ref":"ETR25437721","counterparty":"SQ *INTERAC E-TRANSFER DEPOSIT","internal_cents":null,"processor_cents":36541,"diff_cents":-36541,"note":"Credit from processor with no booking; unidentified deposit"}],"rejected":[{"source":"internal","row":1002,"reason":"date '2026-13-01' does not match format %Y-%m-%d"},{"source":"processor","row":66,"reason":"amount is empty"},{"source":"processor","row":155,"reason":"date '31/09/2026' does not match format %d/%m/%Y"},{"source":"processor","row":474,"reason":"not a valid amount: '12..50'"}],"settings":{"date_window_days":3,"tolerance_cents":250,"fuzzy_threshold":0.8},"evaluation":{"precision":1.0,"recall":1.0,"status_accuracy":1.0,"scenarios":[{"name":"batch","items":28,"correct":28},{"name":"break","items":11,"correct":11},{"name":"clean","items":718,"correct":718},{"name":"duplicate","items":3,"correct":3},{"name":"extra-chargeback","items":6,"correct":6},{"name":"extra-deposit","items":6,"correct":6},{"name":"fee","items":73,"correct":73},{"name":"missing","items":24,"correct":24},{"name":"noref","items":44,"correct":44},{"name":"split","items":22,"correct":22},{"name":"timing","items":35,"correct":35}]}}</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("recon-data").textContent);
+  var NS = "http://www.w3.org/2000/svg";
+
+  // ---------- helpers ----------
+  function money(c, signed) {
+    if (c === null || c === undefined) return "";
+    var v = Math.abs(c) / 100;
+    var s = v.toLocaleString("en-CA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    var sign = c < 0 ? "−" : (signed && c > 0 ? "+" : "");
+    return sign + "$" + s;
+  }
+  function moneyShort(c) {
+    var v = Math.abs(c) / 100, sign = c < 0 ? "−" : "";
+    if (v >= 1e6) return sign + "$" + (v / 1e6).toFixed(1) + "M";
+    if (v >= 1e3) return sign + "$" + (v / 1e3).toFixed(v >= 1e4 ? 0 : 1) + "k";
+    return sign + "$" + v.toFixed(0);
+  }
+  function pct(x) { return (x * 100).toFixed(1) + "%"; }
+  function num(n) { return n.toLocaleString("en-CA"); }
+  function el(tag, attrs, text) {
+    var e = document.createElement(tag);
+    if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function svg(tag, attrs, text) {
+    var e = document.createElementNS(NS, tag);
+    if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function css(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function niceTicks(lo, hi, count) {
+    var span = hi - lo || 1, step = Math.pow(10, Math.floor(Math.log10(span / count)));
+    var err = (span / count) / step;
+    if (err >= 7.5) step *= 10; else if (err >= 3.5) step *= 5; else if (err >= 1.5) step *= 2;
+    var t = [], v = Math.ceil(lo / step) * step;
+    for (; v <= hi + step * 1e-9; v += step) t.push(Math.round(v / step) * step);
+    return { ticks: t, lo: Math.min(lo, Math.floor(lo / step) * step), hi: Math.max(hi, Math.ceil(hi / step) * step) };
+  }
+  // Bar whose data end (right or left) is rounded and whose baseline end is square.
+  function barPath(x0, x1, y, h, r) {
+    var left = Math.min(x0, x1), right = Math.max(x0, x1), w = right - left;
+    r = Math.min(r, w / 2, h / 2);
+    if (w <= 0) return "";
+    if (x1 >= x0) return "M" + left + "," + y + "H" + (right - r) + "Q" + right + "," + y + " " + right + "," + (y + r) +
+      "V" + (y + h - r) + "Q" + right + "," + (y + h) + " " + (right - r) + "," + (y + h) + "H" + left + "Z";
+    return "M" + right + "," + y + "H" + (left + r) + "Q" + left + "," + y + " " + left + "," + (y + r) +
+      "V" + (y + h - r) + "Q" + left + "," + (y + h) + " " + (left + r) + "," + (y + h) + "H" + right + "Z";
+  }
+  // Measure text so label columns fit their content instead of a guessed width.
+  var measureCtx = document.createElement("canvas").getContext("2d");
+  function textW(t, size, weight) {
+    measureCtx.font = (weight || 400) + " " + size + "px " + getComputedStyle(document.body).fontFamily;
+    return measureCtx.measureText(t).width;
+  }
+  function labelCol(labels, W) {
+    var widest = Math.max.apply(null, labels.map(function (l) { return textW(l, 12, 650); }));
+    return Math.min(Math.ceil(widest) + 2, Math.floor(W * 0.45));
+  }
+  function fit(t, maxW) {
+    if (textW(t, 12) <= maxW) return t;
+    while (t.length > 1 && textW(t + "…", 12) > maxW) t = t.slice(0, -1);
+    return t + "…";
+  }
+  // Drop ticks that would sit closer than minGap pixels, so axis labels never collide.
+  function thin(ticks, sx, minGap) {
+    var kept = [], last = -Infinity;
+    ticks.forEach(function (t) { var x = sx(t); if (x - last >= minGap) { kept.push(t); last = x; } });
+    return kept;
+  }
+  function legend(id, items) {
+    var box = document.getElementById(id); box.textContent = "";
+    items.forEach(function (it) {
+      var s = el("span"); var sw = el("i", { "class": "sw" }); sw.style.background = "var(" + it.color + ")";
+      s.appendChild(sw); s.appendChild(document.createTextNode(it.label)); box.appendChild(s);
+    });
+  }
+  function table(id, head, rows, numCols) {
+    var t = el("table", { "class": "mini" }), tr = el("tr");
+    head.forEach(function (h, i) { tr.appendChild(el("th", numCols.indexOf(i) >= 0 ? { "class": "num" } : null, h)); });
+    var th = el("thead"); th.appendChild(tr); t.appendChild(th);
+    var tb = el("tbody");
+    rows.forEach(function (r) {
+      var row = el("tr");
+      r.forEach(function (c, i) { row.appendChild(el("td", numCols.indexOf(i) >= 0 ? { "class": "num" } : null, c)); });
+      tb.appendChild(row);
+    });
+    t.appendChild(tb);
+    var box = document.getElementById(id); box.textContent = ""; box.appendChild(t);
+  }
+
+  // ---------- tooltip ----------
+  var tip = document.getElementById("tip");
+  function showTip(evt, lines) {
+    tip.textContent = "";
+    lines.forEach(function (l, i) {
+      var d = el("div");
+      if (i === 0) d.appendChild(el("b", null, l));
+      else { var parts = l.split("|"); d.appendChild(el("span", { "class": "k" }, parts[0] + (parts.length > 1 ? ": " : "")));
+             if (parts.length > 1) d.appendChild(document.createTextNode(parts[1])); }
+      tip.appendChild(d);
+    });
+    tip.style.opacity = 1;
+    var x = evt.clientX + 14, y = evt.clientY + 14, r = tip.getBoundingClientRect();
+    if (x + r.width > innerWidth - 8) x = evt.clientX - r.width - 14;
+    if (y + r.height > innerHeight - 8) y = evt.clientY - r.height - 14;
+    tip.style.left = x + "px"; tip.style.top = y + "px";
+  }
+  function hideTip() { tip.style.opacity = 0; }
+  function hover(target, lines, mark) {
+    target.addEventListener("mousemove", function (e) { showTip(e, lines); if (mark) mark.style.opacity = 0.85; });
+    target.addEventListener("mouseleave", function () { hideTip(); if (mark) mark.style.opacity = 1; });
+  }
+
+  // ---------- horizontal bar chart ----------
+  function hbar(id, rows, opts) {
+    var box = document.getElementById(id), W = Math.max(box.clientWidth, 280);
+    var labelW = labelCol(rows.map(function (r) { return r.label; }), W), valueW = 52, rowH = 28, barH = 14, top = 4, axisH = 22;
+    var plotX = labelW + 10, plotW = W - plotX - valueW;
+    var H = top + rows.length * rowH + axisH;
+    var max = Math.max.apply(null, rows.map(function (r) { return r.value; })) || 1;
+    var nt = niceTicks(0, max, Math.max(2, Math.floor(plotW / 90)));
+    var sx = function (v) { return plotX + (v / nt.hi) * plotW; };
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, width: W, height: H });
+    thin(nt.ticks, sx, 48).forEach(function (t) {
+      var x = sx(t);
+      s.appendChild(svg("line", { x1: x, x2: x, y1: top, y2: top + rows.length * rowH, stroke: css("--grid"), "stroke-width": 1 }));
+      s.appendChild(svg("text", { x: x, y: H - 6, "text-anchor": "middle", "font-size": 11, fill: css("--muted") },
+        opts.tick ? opts.tick(t) : num(t)));
+    });
+    rows.forEach(function (r, i) {
+      var y = top + i * rowH, by = y + (rowH - barH) / 2;
+      s.appendChild(svg("text", { x: labelW, y: y + rowH / 2 + 4, "text-anchor": "end", "font-size": 12, fill: css("--ink-2") }, fit(r.label, labelW)));
+      var p = svg("path", { d: barPath(plotX, sx(r.value), by, barH, 4), fill: css(r.color) });
+      s.appendChild(p);
+      s.appendChild(svg("text", { x: sx(r.value) + 6, y: y + rowH / 2 + 4, "font-size": 12, fill: css("--ink"),
+        "font-variant-numeric": "tabular-nums" }, r.valueLabel));
+      var hit = svg("rect", { x: 0, y: y, width: W, height: rowH, fill: "transparent" });
+      hover(hit, r.tip, p); s.appendChild(hit);
+    });
+    s.appendChild(svg("line", { x1: plotX, x2: plotX, y1: top, y2: top + rows.length * rowH, stroke: css("--axis"), "stroke-width": 1 }));
+    box.textContent = ""; box.appendChild(s);
+  }
+
+  // ---------- bridge (waterfall) chart ----------
+  function bridge(id, steps, totalCents) {
+    var box = document.getElementById(id), W = Math.max(box.clientWidth, 280);
+    var rows = [], run = 0;
+    steps.forEach(function (st) { rows.push({ label: st.label, from: run, to: run + st.cents, cents: st.cents }); run += st.cents; });
+    rows.push({ label: "Gap between files", from: 0, to: totalCents, cents: totalCents, total: true });
+    var valueW = Math.ceil(Math.max.apply(null, rows.map(function (r) { return textW(money(r.cents, !r.total), 12, 650); }))) + 14;
+    var labelW = labelCol(rows.map(function (r) { return r.label; }), W - valueW), rowH = 30, barH = 16, top = 4, axisH = 22;
+    var plotX = labelW + 10, plotW = W - plotX - valueW;
+    var vals = [0]; rows.forEach(function (r) { vals.push(r.from, r.to); });
+    var nt = niceTicks(Math.min.apply(null, vals), Math.max.apply(null, vals), Math.max(2, Math.floor(plotW / 90)));
+    var sx = function (v) { return plotX + ((v - nt.lo) / (nt.hi - nt.lo)) * plotW; };
+    var H = top + rows.length * rowH + axisH;
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, width: W, height: H });
+    thin(nt.ticks, sx, 52).forEach(function (t) {
+      var x = sx(t);
+      s.appendChild(svg("line", { x1: x, x2: x, y1: top, y2: top + rows.length * rowH,
+        stroke: t === 0 ? css("--axis") : css("--grid"), "stroke-width": 1 }));
+      s.appendChild(svg("text", { x: x, y: H - 6, "text-anchor": "middle", "font-size": 11, fill: css("--muted") }, moneyShort(t)));
+    });
+    rows.forEach(function (r, i) {
+      var y = top + i * rowH, by = y + (rowH - barH) / 2;
+      var color = r.total ? "--total" : (r.cents >= 0 ? "--series-1" : "--series-2");
+      s.appendChild(svg("text", { x: labelW, y: y + rowH / 2 + 4, "text-anchor": "end", "font-size": 12,
+        fill: r.total ? css("--ink") : css("--ink-2"), "font-weight": r.total ? 650 : 400 }, fit(r.label, labelW)));
+      var x0 = sx(r.from), x1 = sx(r.to);
+      if (Math.abs(x1 - x0) < 2) x1 = x0 + (r.cents >= 0 ? 2 : -2);   // keep tiny steps visible
+      var p = svg("path", { d: barPath(x0, x1, by, barH, 4), fill: css(color) });
+      s.appendChild(p);
+      if (i < rows.length - 1) {
+        var cx = sx(r.to);
+        s.appendChild(svg("line", { x1: cx, x2: cx, y1: by + barH, y2: by + rowH, stroke: css("--muted"),
+          "stroke-width": 1, "stroke-dasharray": "2 2" }));
+      }
+      s.appendChild(svg("text", { x: W - 2, y: y + rowH / 2 + 4, "text-anchor": "end", "font-size": 12,
+        fill: css("--ink"), "font-weight": r.total ? 650 : 400 }, money(r.cents, !r.total)));
+      var hit = svg("rect", { x: 0, y: y, width: W, height: rowH, fill: "transparent" });
+      hover(hit, r.total
+        ? ["Gap between files", "Internal total|" + money(D.totals.internal_cents), "Processor total|" + money(D.totals.processor_cents),
+           "Difference|" + money(totalCents)]
+        : [r.label, "Effect on gap|" + money(r.cents, true), "Running total|" + money(r.to)], p);
+      s.appendChild(hit);
+    });
+    box.textContent = ""; box.appendChild(s);
+  }
+
+  // ---------- header + KPIs ----------
+  var T = D.totals;
+  var inp = D.inputs || {};
+  document.getElementById("subtitle").textContent =
+    "Cutoff " + D.as_of + (inp.internal ? " · " + inp.internal + " vs " + inp.processor : "");
+  var tie = document.getElementById("tie"), ok = T.unexplained_cents === 0;
+  var dot = el("i", { "class": "dot" }); dot.style.background = ok ? "var(--good)" : "var(--critical)";
+  tie.appendChild(dot);
+  tie.appendChild(document.createTextNode(ok ? "Ties out: $0.00 unexplained" : "Does not tie: " + money(T.unexplained_cents) + " unexplained"));
+
+  var open = D.exceptions.filter(function (e) { return e.cat !== "timing"; }).length;
+  var kpis = [
+    { label: "Internal ledger", value: money(T.internal_cents), note: num(T.internal_records) + " bookings" },
+    { label: "Processor settlements", value: money(T.processor_cents), note: num(T.processor_records) + " lines" },
+    { label: "Gap to explain", value: money(T.gap_cents), note: ok ? "Fully explained below" : "Not fully explained", cls: "" },
+    { label: "Bookings matched", value: pct(T.internal_match_rate), note: pct(T.processor_match_rate) + " of settlement lines" },
+    { label: "Exceptions to work", value: num(open), note: (D.exceptions.length - open) + " timing items expected to clear" },
+    { label: "Rows rejected", value: num(T.rejected), note: "Unparseable dates or amounts" }
+  ];
+  var kbox = document.getElementById("kpis");
+  kpis.forEach(function (k) {
+    var c = el("div", { "class": "card kpi" });
+    c.appendChild(el("div", { "class": "label" }, k.label));
+    c.appendChild(el("div", { "class": "value" }, k.value));
+    c.appendChild(el("div", { "class": "note" }, k.note));
+    kbox.appendChild(c);
+  });
+
+  // ---------- static text, legends, tables ----------
+  document.getElementById("bridge-desc").textContent =
+    "Internal total minus processor total = " + money(T.gap_cents) + ". Each bar is one reason; together they explain all of it.";
+  var timingCount = D.aging[0].count;
+  document.getElementById("aging-desc").textContent =
+    "Bookings with no settlement yet. Items under " + D.timing_lag_days + " days old are timing and should clear next cycle; older ones need chasing.";
+  legend("lg-status", [{ label: "Matched", color: "--series-1" }, { label: "Needs review", color: "--series-2" }]);
+  legend("lg-bridge", [{ label: "Widens gap", color: "--series-1" }, { label: "Narrows gap", color: "--series-2" }, { label: "Total", color: "--total" }]);
+  legend("lg-aging", [{ label: "Timing (expected)", color: "--series-1" }, { label: "Chase processor", color: "--series-2" }]);
+
+  table("tb-status", ["Outcome", "Items", "Internal $", "Processor $"],
+    D.statuses.map(function (s) { return [s.label, num(s.items), money(s.internal_cents), money(s.processor_cents)]; }), [1, 2, 3]);
+  table("tb-bridge", ["Reason", "Effect on gap"],
+    D.bridge.map(function (b) { return [b.label, money(b.cents, true)]; }).concat([["Gap between files", money(T.gap_cents)]]), [1]);
+  table("tb-aging", ["Age", "Bookings", "Amount"],
+    D.aging.map(function (a) { return [a.label, num(a.count), money(a.cents)]; }), [1, 2]);
+
+  if (D.evaluation) {
+    var E = D.evaluation, acc = document.getElementById("acc");
+    [["Link precision", E.precision, "pairings made that are correct"], ["Link recall", E.recall, "true pairings found"],
+     ["Status accuracy", E.status_accuracy, "items in the right bucket"]].forEach(function (m) {
+      var c = el("div"); c.appendChild(el("div", { "class": "v" }, (m[1] * 100).toFixed(2) + "%"));
+      c.appendChild(el("div", { "class": "l" }, m[0] + ": " + m[2])); acc.appendChild(c);
+    });
+    table("tb-acc", ["Scenario", "Items", "Correct", "Rate"],
+      E.scenarios.map(function (s) { return [s.name, num(s.items), num(s.correct), pct(s.correct / s.items)]; }), [1, 2, 3]);
+  } else {
+    document.getElementById("acc-card").style.display = "none";
+  }
+
+  // ---------- exceptions table ----------
+  var CATS = [
+    { key: "all", label: "All" },
+    { key: "break", label: "Breaks", status: "critical", icon: "!" },
+    { key: "chase", label: "Not settled", status: "serious", icon: "?" },
+    { key: "not_booked", label: "Not booked", status: "serious", icon: "?" },
+    { key: "duplicate", label: "Duplicates", status: "warning", icon: "2" },
+    { key: "review", label: "Ambiguous", status: "warning", icon: "~" },
+    { key: "timing", label: "Timing", status: "good", icon: "✓" }
+  ];
+  var CAT = {}; CATS.forEach(function (c) { CAT[c.key] = c; });
+  var PAGE = 15;
+  var state = { cat: "all", q: "", sort: "age", dir: -1, limit: PAGE };
+  var chips = document.getElementById("chips");
+  CATS.forEach(function (c) {
+    var n = c.key === "all" ? D.exceptions.length : D.exceptions.filter(function (e) { return e.cat === c.key; }).length;
+    if (c.key !== "all" && n === 0) return;
+    var b = el("button", { "class": "chip", type: "button", "aria-pressed": c.key === state.cat ? "true" : "false", "data-cat": c.key });
+    b.appendChild(document.createTextNode(c.label)); b.appendChild(el("span", { "class": "n" }, num(n)));
+    b.addEventListener("click", function () {
+      state.cat = c.key; state.limit = PAGE;
+      chips.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      renderTable();
+    });
+    chips.appendChild(b);
+  });
+  document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value.toLowerCase(); state.limit = PAGE; renderTable(); });
+
+  var COLS = [
+    { key: "cat", label: "Queue" }, { key: "id", label: "Item" }, { key: "date", label: "Date" },
+    { key: "age", label: "Age", num: true }, { key: "counterparty", label: "Counterparty" },
+    { key: "ids", label: "Records" }, { key: "internal_cents", label: "Internal", num: true },
+    { key: "processor_cents", label: "Processor", num: true }, { key: "diff_cents", label: "Difference", num: true },
+    { key: "note", label: "Reason" }
+  ];
+  function renderTable() {
+    var q = state.q;
+    var rows = D.exceptions.filter(function (e) {
+      if (state.cat !== "all" && e.cat !== state.cat) return false;
+      if (!q) return true;
+      return [e.id, e.counterparty, e.ref, e.note, e.internal.join(" "), e.processor.join(" ")].join(" ").toLowerCase().indexOf(q) >= 0;
+    });
+    var k = state.sort, dir = state.dir;
+    rows.sort(function (a, b) {
+      var x = a[k], y = b[k];
+      if (k === "cat") { x = CAT[a.cat].label; y = CAT[b.cat].label; }
+      if (x === null || x === undefined) x = -Infinity; if (y === null || y === undefined) y = -Infinity;
+      return (x < y ? -1 : x > y ? 1 : 0) * dir || (a.id < b.id ? -1 : 1);
+    });
+    var t = document.getElementById("ex"); t.textContent = "";
+    var head = el("thead"), hr = el("tr");
+    COLS.forEach(function (c) {
+      var th = el("th", c.num ? { "class": "num" } : {}, c.label);
+      if (c.key !== "ids") {
+        th.setAttribute("data-sort", c.key);
+        th.setAttribute("aria-sort", state.sort === c.key ? (dir > 0 ? "ascending" : "descending") : "none");
+        if (state.sort === c.key) th.appendChild(el("span", { "class": "arr" }, dir > 0 ? "▲" : "▼"));
+        th.addEventListener("click", function () {
+          if (state.sort === c.key) state.dir = -state.dir; else { state.sort = c.key; state.dir = c.num ? -1 : 1; }
+          renderTable();
+        });
+      }
+      hr.appendChild(th);
+    });
+    head.appendChild(hr); t.appendChild(head);
+    var body = el("tbody");
+    rows.slice(0, state.limit).forEach(function (e) {
+      var tr = el("tr"), c = CAT[e.cat];
+      var tdq = el("td"), tag = el("span", { "class": "tag" }), ic = el("span", { "class": "icon", "aria-hidden": "true" }, c.icon);
+      ic.style.background = "var(--" + c.status + ")"; tag.appendChild(ic); tag.appendChild(document.createTextNode(c.label));
+      tdq.appendChild(tag); tr.appendChild(tdq);
+      tr.appendChild(el("td", { "class": "ids" }, e.id));
+      tr.appendChild(el("td", { "class": "num" }, e.date));
+      tr.appendChild(el("td", { "class": "num" }, e.age + "d"));
+      tr.appendChild(el("td", null, e.counterparty));
+      tr.appendChild(el("td", { "class": "ids" }, e.internal.concat(e.processor).join(", ")));
+      tr.appendChild(el("td", { "class": "num" }, money(e.internal_cents)));
+      tr.appendChild(el("td", { "class": "num" }, money(e.processor_cents)));
+      tr.appendChild(el("td", { "class": "num" }, money(e.diff_cents, true)));
+      tr.appendChild(el("td", { "class": "note" }, e.note));
+      body.appendChild(tr);
+    });
+    if (!rows.length) { var tr0 = el("tr"), td0 = el("td", { colspan: COLS.length, "class": "empty" }, "No exceptions match this filter."); tr0.appendChild(td0); body.appendChild(tr0); }
+    t.appendChild(body);
+    var more = document.getElementById("more"); more.textContent = "";
+    if (rows.length > state.limit) {
+      var btn = el("button", { type: "button" }, "Show " + Math.min(PAGE, rows.length - state.limit) + " more of " + (rows.length - state.limit) + " remaining");
+      btn.addEventListener("click", function () { state.limit += PAGE; renderTable(); });
+      more.appendChild(btn);
+    } else if (rows.length) {
+      more.appendChild(el("span", { "class": "sub" }, "Showing all " + rows.length + " item" + (rows.length === 1 ? "" : "s")));
+    }
+  }
+
+  // ---------- charts ----------
+  function drawCharts() {
+    hbar("ch-status", D.statuses.filter(function (s) { return s.items > 0; }).map(function (s) {
+      return { label: s.label, value: s.items, valueLabel: num(s.items), color: s.matched ? "--series-1" : "--series-2",
+        tip: [s.label, "Items|" + num(s.items), "Bookings|" + num(s.internal_records) + " · " + money(s.internal_cents),
+              "Settlement lines|" + num(s.processor_records) + " · " + money(s.processor_cents)] };
+    }), {});
+    bridge("ch-bridge", D.bridge, T.gap_cents);
+    hbar("ch-aging", D.aging.map(function (a, i) {
+      var timing = a.hi < D.timing_lag_days;
+      return { label: a.label, value: a.count, valueLabel: num(a.count), color: timing ? "--series-1" : "--series-2",
+        tip: [a.label, "Bookings|" + num(a.count), "Amount|" + money(a.cents), "Action|" + (timing ? "Expected next cycle" : "Chase processor")] };
+    }), {});
+  }
+
+  // ---------- footer ----------
+  var foot = document.getElementById("foot");
+  foot.appendChild(el("span", null, "Generated " + D.generated + " by "));
+  foot.lastChild.appendChild(el("code", null, "python -m recon dashboard"));
+  if (D.settings) foot.appendChild(el("span", null, "Date window " + D.settings.date_window_days + " days · fee tolerance " +
+    money(D.settings.tolerance_cents) + " · fuzzy threshold " + D.settings.fuzzy_threshold));
+  if (D.rejected.length) foot.appendChild(el("span", null, D.rejected.length + " rejected rows: " +
+    D.rejected.map(function (r) { return r.source + " row " + r.row + " (" + r.reason + ")"; }).join("; ")));
+
+  // ---------- theme toggle ----------
+  var root = document.documentElement;
+  try { var saved = localStorage.getItem("recon-theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+  document.getElementById("theme").addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") ? root.getAttribute("data-theme") === "dark"
+      : matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("recon-theme", next); } catch (e) {}
+    drawCharts();
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawCharts);
+
+  renderTable();
+  drawCharts();
+  var rt; addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(drawCharts, 120); });
+})();
+</script>
+</body>
+</html>

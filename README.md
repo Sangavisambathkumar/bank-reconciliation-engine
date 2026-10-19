@@ -5,9 +5,13 @@ payment processor's settlement file. It matches records that don't line up
 perfectly, explains every dollar of difference, and produces the exceptions
 report an operations team works from each morning.
 
+**[▶ View the live dashboard](https://sangavisambathkumar.github.io/bank-reconciliation-engine/)** — no install needed.
+
+[![Reconciliation dashboard preview](docs/dashboard-preview.png)](https://sangavisambathkumar.github.io/bank-reconciliation-engine/)
+
 ```
 Internal ledger (1,000 rows)  ─┐                         ┌─► Excel report (7 sheets)
-                               ├─► normalize ─► 8 match ─┼─► CSV detail
+                               ├─► normalize ─► 8 match ─┼─► HTML dashboard + CSV detail
 Processor file  (  939 rows)  ─┘    + validate   passes  └─► Proof: gap explained to $0.00
 ```
 
@@ -119,12 +123,14 @@ recon-engine/
 │   ├── config.py            typed settings
 │   ├── matcher.py           the multi-pass engine + reconciliation proof
 │   ├── report.py            Excel workbook + CSV + console summary
+│   ├── dashboard.py         self-contained interactive HTML dashboard
 │   ├── generate.py          realistic messy test data + answer key
 │   ├── evaluate.py          precision / recall / status accuracy
 │   └── cli.py               command-line interface
-├── tests/                   41 tests: normalizers, each pass, end to end
+├── tests/                   46 tests: normalizers, each pass, dashboard, end to end
 ├── data/                    sample input (generated)
-└── output/                  sample report (generated)
+├── output/                  sample report + dashboard (generated)
+└── docs/                    the published dashboard (GitHub Pages)
 ```
 
 ## Quick start
@@ -135,8 +141,9 @@ Requires Python 3.10+.
 pip install -r requirements.txt
 
 python -m recon generate     # create data/internal_ledger.csv, data/processor_settlement.csv, data/ground_truth.json
-python -m recon run          # reconcile → output/recon_report.xlsx and output/recon_results.csv
+python -m recon run          # reconcile → output/recon_report.xlsx, recon_results.csv, dashboard.html
 python -m recon evaluate     # run + score against the answer key
+python -m recon dashboard    # write only the HTML dashboard (see below)
 python -m pytest             # run the test suite
 ```
 
@@ -179,6 +186,33 @@ Edit `config.json` to map your column names and date format. No code changes nee
 | Duplicates | Analyst | Possible double postings |
 | Rejected | Data owner | Rows that couldn't be parsed, with the raw data |
 
+## The dashboard
+
+`python -m recon dashboard` turns any reconciliation run into one HTML file:
+data is embedded and charts are drawn with plain JavaScript, so it has no
+dependencies and works opened from a folder, attached to an email, or hosted.
+[See it live.](https://sangavisambathkumar.github.io/bank-reconciliation-engine/)
+
+| Panel | What it answers |
+|---|---|
+| Headline cards + "Ties out" badge | How big are the two files, how much is matched, does it balance? |
+| Where every item landed | How many items fell into each outcome |
+| Why the two files differ | A bridge chart walking from $0 to the full gap, one reason at a time |
+| Unsettled bookings by age | Which unsettled items are just timing and which need chasing |
+| Engine accuracy | Precision, recall and per-scenario results vs. the answer key (optional) |
+| Exceptions to work | Filter by queue (breaks, not settled, not booked, duplicates, timing), search, sort |
+
+It supports light and dark themes, works on phones, has hover tooltips on
+every bar, and a "View as table" option under each chart for accessibility.
+
+```bash
+python -m recon dashboard --out docs/index.html --truth data/ground_truth.json   # rebuild the published page
+python -m recon dashboard --internal my_ledger.csv --processor my_settlement.csv --out my_dashboard.html
+```
+
+To publish your own copy, enable GitHub Pages in the repo settings
+(**Settings → Pages → Deploy from a branch → `main` / `docs`**).
+
 ## Ideas to extend it
 
 - **Learned matching:** train a classifier on analysts' accept/reject decisions to replace the hand-tuned fuzzy weights.
@@ -193,4 +227,4 @@ Edit `config.json` to map your column names and date format. No code changes nee
 
 - Built a multi-pass reconciliation engine in Python that matches bank ledger records to processor settlement files across fees, batched and split settlements, missing references and duplicates, at 99.97–100% precision and recall on 10,000-transaction test sets.
 - Designed a self-checking reconciliation proof that explains every dollar of difference between the two files and fails the run if anything is unaccounted for.
-- Produced a 7-sheet Excel exceptions report separating timing differences from genuine breaks, so analysts can prioritize risk.
+- Produced a 7-sheet Excel exceptions report and an interactive, dependency-free HTML dashboard (published on GitHub Pages) separating timing differences from genuine breaks, so analysts can prioritize risk.
